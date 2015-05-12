@@ -1,0 +1,5 @@
+<Alloy>
+	<View class="container">
+		<Require type="view" src="navigationbar"/>
+	</View>
+</Alloy>

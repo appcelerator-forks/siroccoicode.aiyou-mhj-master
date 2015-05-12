@@ -1,0 +1,15 @@
+<Alloy>
+	<View class="container">
+		<Widget id="navBar" src="club.siroccoicode.navbar">
+			<View id="back" role="leftView">
+				<Label id="backbutton" text="back"/>
+			</View>
+			<View id="title" role="titleView">
+				<Widget id="segment" src="club.siroccoicode.segement"/>
+			</View>
+			<View id="right" role="rightView">
+				<Label text="right"/>
+			</View>	
+		</Widget>
+	</View>
+</Alloy>

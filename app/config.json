@@ -1,0 +1,22 @@
+{
+    "global": {
+        "GroupID": "140589",
+        "APPINFO": "http://openapi.aiyou.com/app/api/info"
+    },
+    "env:development": {},
+    "env:test": {},
+    "env:production": {},
+    "os:android": {
+        "APP_KEY": "cdc8f1c9acd89e3e4a37d77ad053528c"
+    },
+    "os:ios": {
+        "APP_KEY": "9bf15bdb34b5d20ae8cbf3e8d514b9c2"
+    },
+    "os:mobileweb": {},
+    "os:windows": {},
+    "dependencies": {
+        "me.wslong.tiTabs": "2.0",
+        "club.siroccoicode.navbar": "1.0",
+        "club.siroccoicode.segement": "1.0"
+    }
+}
