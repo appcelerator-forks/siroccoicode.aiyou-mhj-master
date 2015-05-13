@@ -1,0 +1,10 @@
+
+"#homeback" : {
+	layout:"vertical"
+}
+"#testlabel":{
+	top:'80dp',
+	width:"100dp",
+	height:"100dp",
+	left:"15dp"
+}

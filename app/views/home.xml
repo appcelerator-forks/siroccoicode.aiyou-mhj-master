@@ -1,0 +1,13 @@
+<Alloy>
+<View id="sss">
+	<Widget src="club.siroccoicode.popmenu" id="menuWidget">
+		<Label text="test" />
+	</Widget>	
+	<View id="homeback">
+		<Require type="view" src="navigationbar" id="navbar" />	
+		<ScrollableView id='scroll'>
+			<!-- 综合、礼包、小说-->
+		</ScrollableView>
+	</View>
+</View>
+</Alloy>
