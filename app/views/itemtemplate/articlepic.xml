@@ -1,0 +1,15 @@
+<Alloy>
+	<ItemTemplate name="articlepic">
+		<View id="background">
+			<ImageView id="usericon"/>
+			<View>
+				<ImageView id="thumbpic"/>
+				<Label text="标题"/>
+				<Label text="正文"/>
+			</View>
+			<Label text="名字" />
+			<Label text="时间" />
+			<ImageView id="menu"/>
+		</View>
+	</ItemTemplate>
+</Alloy>

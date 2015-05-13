@@ -17,6 +17,10 @@
     "dependencies": {
         "me.wslong.tiTabs": "2.0",
         "club.siroccoicode.navbar": "1.0",
-        "club.siroccoicode.segement": "1.0"
+        "club.siroccoicode.segement": "1.0",
+        "menu": "1.0",
+        "club.siroccoicode.popmenu": "1.0",
+        "nl.fokkezb.infiniteScroll":"1.4.4",
+        "com.jolicode.pullToRefresh":"1.2"
     }
 }

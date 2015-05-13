@@ -1,0 +1,19 @@
+
+".container" : {
+  height:'115dp',
+  width:Ti.UI.FILL,
+  layout:'composite',
+  backgroundColor:"#f0f0f0"
+},
+"ImageView":{
+	width:'85dp',
+	height:'100dp'
+},
+"#pack1":{
+	left:"40dp",
+	image:"/imgres/placeholder/juhua.png"
+},
+"#pack2":{
+	right:"40dp",
+	image:"/imgres/placeholder/juhua.png"
+}

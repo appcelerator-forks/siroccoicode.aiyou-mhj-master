@@ -1,0 +1,28 @@
+<Alloy>
+	<View id="multiback">
+		<ListView id="multilist">
+			<Templates>
+				<Require src="/itemtemplate/toparticle"/>
+				<Require src="toppack" />
+				<Require src="/itemtemplate/article"/>
+				<Require src="/itemtemplate/articlepic"/>
+			</Templates>
+			
+			<ListSection>
+				<HeaderView>
+				</HeaderView>
+				<ListItem template="toppack"/>
+				<ListItem title:text="Apple" template="toparticle"/>
+                <ListItem title:text="Orange" template="toparticle" />
+                <ListItem title:text="Pear" template="toparticle" />
+				<FooterView>
+					<View backgroundColor="#fff">
+						<Label text="siss" />
+					</View>
+				</FooterView>
+			</ListSection>
+			<ListSection>
+			</ListSection>
+		</ListView>
+	</View>
+</Alloy>

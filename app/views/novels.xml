@@ -1,5 +1,5 @@
 <Alloy>
 	<View class="container">
-		<Require type="view" src="navigationbar"/>
+		<Label text="小说" />
 	</View>
 </Alloy>

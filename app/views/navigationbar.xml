@@ -8,7 +8,7 @@
 				<Widget id="segment" src="club.siroccoicode.segement"/>
 			</View>
 			<View id="right" role="rightView">
-				<Label text="right"/>
+				<Button id="btnMenu"/>
 			</View>	
 		</Widget>
 	</View>

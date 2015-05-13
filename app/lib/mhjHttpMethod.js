@@ -24,3 +24,6 @@ exports.HttpGET=function(request,success,error,isAsync){
 exports.HttpDEL=function(request,success,error,isAsync){
 	
 };
+exports.HttpError=function(){
+    
+};

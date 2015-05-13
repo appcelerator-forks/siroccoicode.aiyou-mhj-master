@@ -1,0 +1,8 @@
+<Alloy>
+	<ItemTemplate name="toppack">
+	<View class="container">
+		<ImageView id="pack1" />
+		<ImageView id="pack2" />
+	</View>
+	</ItemTemplate>
+</Alloy>

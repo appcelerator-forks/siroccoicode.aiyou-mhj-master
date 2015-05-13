@@ -1,0 +1,5 @@
+<Alloy>
+	<View class="container">
+		<Label text="礼包" />
+	</View>
+</Alloy>

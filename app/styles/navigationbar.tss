@@ -3,4 +3,15 @@
 	font:{
 		size:"20dp"
 	}
+},
+'.container':{
+	top:"0dp",
+	width:Ti.UI.FILL,
+	height:Ti.UI.SIZE
+},
+"#btnMenu":{
+	width: 25,
+	height: 25,
+	backgroundImage: "/imgres/btnMenu.png",
+	backgroundSelectedImage: "/imgres/btnMenu.png"
 }

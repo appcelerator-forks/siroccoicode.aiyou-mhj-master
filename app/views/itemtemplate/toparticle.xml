@@ -1,0 +1,11 @@
+<Alloy>
+	<ItemTemplate name="toparticle">
+		<View id="background">
+			<ImageView id="logo">
+				<ImageView id="laba" />
+				<Label />
+			</ImageView>
+			<Label id="toparticletitle" bindId="title" />
+		</View>
+	</ItemTemplate>
+</Alloy>
