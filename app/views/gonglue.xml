@@ -1,5 +1,13 @@
 <Alloy>
 	<View class="container">
-		<Label text="礼包" />
+		<ListView id="list" defaultTemplate=Titanium.UI.LIST_ITEM_TEMPLATE_DEFAULT>
+			<ListSection>
+			<ListItem title:text="1"/>
+			<ListItem title:text="2"/>
+			<ListItem title:text="3"/>
+			<ListItem title:text="4"/>
+			</ListSection>
+			 <Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="myLoader" />
+		</ListView>
 	</View>
 </Alloy>

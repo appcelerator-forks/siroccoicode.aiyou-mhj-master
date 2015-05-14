@@ -1,8 +1,5 @@
 <Alloy>
-<View id="sss">
-	<Widget src="club.siroccoicode.popmenu" id="menuWidget">
-		<Label text="test" />
-	</Widget>	
+<View id="back">
 	<View id="homeback">
 		<Require type="view" src="navigationbar" id="navbar" />	
 		<ScrollableView id='scroll'>

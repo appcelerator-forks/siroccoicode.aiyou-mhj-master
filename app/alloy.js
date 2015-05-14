@@ -9,3 +9,26 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+
+Alloy.Globals.isLogin=function(){
+    if(Ti.App.Properties.getString(Alloy.CFG.kUSERID,'0') != '0'){
+        return true;
+    }
+    else{
+        return false;
+    }
+};
+
+Alloy.Globals.translateForGET=function(params){
+      if(typeof params != 'object'){
+          return;
+      }
+      else{
+          var string='';
+          _.each(params,function(value,key,list){
+              string = string+key+"="+value+"&";
+          });
+          return string;
+      }
+};

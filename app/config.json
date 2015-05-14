@@ -1,7 +1,15 @@
 {
     "global": {
         "GroupID": "140589",
-        "APPINFO": "http://openapi.aiyou.com/app/api/info"
+        "APPINFO": "http://openapi.aiyou.com/app/api/info",
+        "kAPIHOST":"apihost",
+        "kAPIVERSION":"apiversion",
+        "kCHECKLOGIN":"islogin",
+        "kUSERTOKEN":"usertoken",
+        "kUSERID":"userid",
+        "ZHTL":"269",
+        "GLXD":"80",
+        "XSYD":"273"
     },
     "env:development": {},
     "env:test": {},
@@ -21,6 +29,8 @@
         "menu": "1.0",
         "club.siroccoicode.popmenu": "1.0",
         "nl.fokkezb.infiniteScroll":"1.4.4",
+        "net.beyondlink.toast":"1.0",
         "com.jolicode.pullToRefresh":"1.2"
+        
     }
 }
