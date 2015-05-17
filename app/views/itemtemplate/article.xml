@@ -1,6 +1,6 @@
 <Alloy>
 	<ItemTemplate name="article" height=Ti.UI.SIZE>
-		<View id="background">
+	<View id="background">
 			<ImageView bindId="authorpic" id="authorpic"/>
 			<View id="rightView">
 			<View id="qian">

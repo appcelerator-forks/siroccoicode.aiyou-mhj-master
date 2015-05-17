@@ -1,5 +1,19 @@
 <Alloy>
-	<View class="container">
-		<Widget src="com.jolicode.pullToRefresh" id="pulltorefresh"/>	
-	</View>
+	<View>
+		
+	<Widget src="nl.fokkezb.pullToRefresh" id="ptr" onRelease="myrefresh" cusvalue="2">
+		<ListView id="gongluelist" defaultTemplate="article">
+			<ListSection id="list">
+			</ListSection>
+			<Templates>
+				<Require src="itemtemplate/article" />
+				<Require src="itemtemplate/articlepic"/>
+			</Templates>
+			<HeaderView>
+				<Require src="searchbar"/>
+			</HeaderView>
+			<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="loadMore" />
+		</ListView>	
+	</Widget>
+ </View>
 </Alloy>

@@ -1,5 +1,7 @@
 <Alloy>
+	<ItemTemplate name="test">
 	<View class="container">
 		<Label text= "test12312321" />
 	</View>
+	</ItemTemplate>
 </Alloy>
