@@ -1,0 +1,17 @@
+<Alloy>
+	<View>	
+	<Widget src="nl.fokkezb.pullToRefresh" id="ptr" onRelease="myrefresh" cusvalue="1">
+		<ListView id="novellist" defaultTemplate="novel">
+			<ListSection id="list">
+			</ListSection>
+			<Templates>
+				<Require src="itemtemplate/novel" />
+			</Templates>
+			<HeaderView>
+				<Require src="searchbar"/>
+			</HeaderView>
+			<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="loadMore" />
+		</ListView>	
+	</Widget>
+ </View>
+</Alloy>
