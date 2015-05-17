@@ -1,3 +1,7 @@
 var args = arguments[0] || {};
+var last_flag="";
 
-$.is.init($.list);
+$.pulltorefresh.initialize({
+    arguments: {},
+    controller: 'gongluelist',
+});

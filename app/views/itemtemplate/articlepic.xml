@@ -1,15 +1,21 @@
 <Alloy>
-	<ItemTemplate name="articlepic">
+	<ItemTemplate name="articlepic" height=Ti.UI.SIZE>
 		<View id="background">
-			<ImageView id="usericon"/>
-			<View>
-				<ImageView id="thumbpic"/>
-				<Label text="标题"/>
-				<Label text="正文"/>
+			<ImageView bindId="authorpic" id="authorpic"/>
+			<View id="rightView">
+			<View id="qian">
+				<Label bindId="title" id="title"/>
+				<View id="article">
+				<ImageView bindId="articlepic" id="articlepic"/>
+				<Label bindId="body" id="body"/>
+				</View>
 			</View>
-			<Label text="名字" />
-			<Label text="时间" />
+			<View id="bottomline">
+			<Label bindId="nickname" id="nickname"/>
+			<Label bindId="created" id="created" />
 			<ImageView id="menu"/>
+			</View>
+		</View>
 		</View>
 	</ItemTemplate>
 </Alloy>

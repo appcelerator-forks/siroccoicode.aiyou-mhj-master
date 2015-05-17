@@ -1,4 +1,71 @@
 
-".container" : {
-  
+"#background" : {
+  backgroundColor:Alloy.CFG.COLORS.DarkBlack,
+  layout:"horizontal",
+  height:Ti.UI.SIZE
+},
+"#title":{
+	top:"15dp",
+	right:"15dp",
+	left:"15dp",
+	color:Alloy.CFG.COLORS.LightBrown,
+	font:{
+		fontSize:"13sp"
+	},
+	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT
+},
+"#body":{
+	color:Alloy.CFG.COLORS.DarkBrown,
+	font:{
+		fontSize:"13sp"
+	},
+	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT,
+	top:"15dp",
+	bottom:"15dp",
+	height:"33dp",
+	left:"15dp",
+	right:"15dp",
+	wordWrap:false
+},
+"#qian":{
+	backgroundColor:Alloy.CFG.COLORS.LightBlack,
+	right:"10dp",
+	left:"22dp",
+	layout:"vertical",
+	height:Ti.UI.SIZE
+},
+"#rightView":{
+	layout:"vertical",
+	height:Ti.UI.SIZE
+	
+},
+"#authorpic":{
+	left:"10dp",
+	top:"15dp",
+	width:"45dp",
+	height:"45dp",
+	borderRadius:"4"
+},
+"#nickname":{
+	left:"22dp",
+	font:{
+		fontSize:"12sp"
+	},
+	color:Alloy.CFG.COLORS.DarkBrown
+},
+"#created":{
+	left:"10dp",
+	color:Alloy.CFG.COLORS.DarkBrown,
+	font:{
+		fontSize:"12sp"
+	}
+},
+"#bottomline":{
+	layout:"horizontal",
+	top:"10dp",
+	bottom:"15dp",
+	height:"30dp"
+	
 }
+
+

@@ -1,9 +1,9 @@
 var args = arguments[0] || {};
 
 var options = {
-  msgTap: L('isTap', 'Tap to load more...'),
-  msgDone: L('isDone', 'No more to load...'),
-  msgError: L('isError', 'Tap to try again...')
+  msgTap: "点击加载更多",
+  msgDone: "没有更多可以加载的了",
+  msgError: "点击重试"
 };
 
 var loading = false,

@@ -9,7 +9,16 @@
         "kUSERID":"userid",
         "ZHTL":"269",
         "GLXD":"80",
-        "XSYD":"273"
+        "XSYD":"273",
+        "LIMITS":"20",
+        "COLORS":{
+            "LightBrown":"#aea399",
+            "DarkBrown":"#605c5c",
+            "LightYellow":"#fff298",
+            "LightBlack":"#363434",
+            "DarkBlack":"#312f2f",
+            "DeepBlack":"#1c1919"
+        }
     },
     "env:development": {},
     "env:test": {},

@@ -29,6 +29,20 @@ Alloy.Globals.translateForGET=function(params){
           _.each(params,function(value,key,list){
               string = string+key+"="+value+"&";
           });
+          Ti.API.info("拼接字符串",string);
           return string;
       }
+      
+};
+
+Alloy.Globals.checkURL=function(element){
+    if(typeof element.author_pic != 'undefined')
+    {
+        
+    }  
+};
+
+Alloy.Globals.stamptotime=function(timestamp){
+    var date=new Date(parseInt(timestamp) * 1000);
+    return date.getFullYear()+"年"+date.getMonth()+"月"+date.getDay()+"日"+date.getHours()+":"+date.getMinutes();
 };

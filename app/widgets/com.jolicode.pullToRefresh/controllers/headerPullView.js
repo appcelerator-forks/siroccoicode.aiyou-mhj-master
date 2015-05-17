@@ -64,13 +64,13 @@ var api = {
             transform: t,
             duration: 180
         });
-        $.status.text = L('release_to_update');
+        $.status.text = "释放刷新";
     },
 
     pullingComplete: function() {
         $.arrow.hide();
         $.indicator.show();
-        $.status.text = L('loading');
+        $.status.text = "加载中";
         $.arrow.transform = Ti.UI.create2DMatrix();
     },
 
@@ -80,14 +80,14 @@ var api = {
             transform: t,
             duration: 180
         });
-        $.status.text = L('pull_to_reload');
+        $.status.text = "下拉刷新";
     },
 
     updateComplete: function() {
         $.indicator.hide();
         $.arrow.show();
-        $.status.text = L('pull_to_reload');
-        $.lastUpdate.text = L('updated_at') + ' ' + api.formatDate();
+        $.status.text ="下拉刷新";
+        $.lastUpdate.text = "最近更新" + ' ' + api.formatDate();
     }
 };
 

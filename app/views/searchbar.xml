@@ -1,0 +1,11 @@
+<Alloy>
+	<View id="searchBackground">
+		<View id="searchTextBack">
+			<View id="searchOverlay">
+				<TextField id="serachField"/>
+				<Label id="searchHintText"/>
+			</View>
+		<ImageView id="searchIcon" />
+		</View>
+	</View>
+</Alloy>

@@ -4,3 +4,6 @@
 "#toparticletitle":{
 	
 }
+"#background":{
+	height:Ti.UI.SIZE
+}

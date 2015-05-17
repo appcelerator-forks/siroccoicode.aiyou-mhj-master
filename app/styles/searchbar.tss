@@ -1,0 +1,47 @@
+
+"#searchBackground" : {
+  backgroundColor:Alloy.CFG.COLORS.DarkBlack,
+  height:Ti.UI.SIZE
+},
+"#serachField":{
+	backgroundColor:Alloy.CFG.COLORS.LightBlack,
+	color:"#363434",
+	font:{
+		fontSize:"14sp"
+	},
+	left:"5dp",
+	width:Ti.UI.FILL,
+	height:"30dp",
+},
+"#searchTextBack":{
+	backgroundColor:Alloy.CFG.COLORS.LightBlack,
+	borderRadius:"10",
+	top:"15dp",
+	bottom:"15dp",
+	width:Ti.UI.SIZE,
+	height:Ti.UI.SIZE,
+	layout:"horizontal"
+},
+"#searchHintText":{
+	left:"0dp",
+	color:Alloy.CFG.COLORS.DarkBrown,
+	font:{
+		fontSize:"14sp",
+		fontWeight:"bold"
+	},
+	text:"找什么攻略,搜搜看..."
+}
+"#searchOverlay":{
+	left:"5dp",
+	width:"205dp",
+	height:"30dp"
+},
+"#searchIcon":{
+	left:"5dp",
+	right:"5dp",
+	top:"5dp",
+	bottom:"5dp",
+	width:"20dp",
+	height:"20dp",
+	image:"/imgres/searchicon.png"
+}

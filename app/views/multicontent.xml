@@ -12,7 +12,7 @@
 				<HeaderView>
 				</HeaderView>
 				<ListItem template="toppack"/>
-				<ListItem title:text="Apple" template="toparticle"/>
+				<ListItem title="Apple" template="toparticle"/>
                 <ListItem title:text="Orange" template="toparticle" />
                 <ListItem title:text="Pear" template="toparticle" />
 				<FooterView>

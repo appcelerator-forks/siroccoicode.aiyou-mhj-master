@@ -1,6 +1,7 @@
 
 "#homeback" : {
-	layout:"vertical"
+	layout:"vertical",
+	bottom:"60dp"
 }
 "#testlabel":{
 	top:'80dp',
