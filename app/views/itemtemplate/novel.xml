@@ -1,0 +1,8 @@
+<Alloy>
+	<ItemTemplate name="novel" height=Ti.UI.SIZE>
+		<View id="background">
+			<Label bindId="title" id="title"/>
+			<Label bindId="body" id="body"/>
+		</View>
+	</ItemTemplate>
+</Alloy>

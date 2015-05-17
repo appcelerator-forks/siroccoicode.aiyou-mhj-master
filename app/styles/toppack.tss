@@ -3,17 +3,16 @@
   height:'115dp',
   width:Ti.UI.FILL,
   layout:'composite',
-  backgroundColor:"#f0f0f0"
+  backgroundColor:Alloy.CFG.COLORS.DarkBlack
 },
 "ImageView":{
-	width:'85dp',
-	height:'100dp'
+	width:'100dp',
+	height:'85dp',
+	borderRadius:"8"
 },
 "#pack1":{
 	left:"40dp",
-	image:"/imgres/placeholder/juhua.png"
 },
 "#pack2":{
 	right:"40dp",
-	image:"/imgres/placeholder/juhua.png"
 }

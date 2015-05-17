@@ -1,6 +1,5 @@
 <Alloy>
-	<View>
-		
+	<View>	
 	<Widget src="nl.fokkezb.pullToRefresh" id="ptr" onRelease="myrefresh" cusvalue="2">
 		<ListView id="gongluelist" defaultTemplate="article">
 			<ListSection id="list">

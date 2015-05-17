@@ -3,7 +3,7 @@
  */
 var requestUrlList={
 	articleList:"/article/list?",
-	packList:"",
+	packList:"/gift/list?",
 	packInfo:"",
 	articleInfo:"",
 	login:"/user/login",

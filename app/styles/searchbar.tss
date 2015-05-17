@@ -28,8 +28,8 @@
 	font:{
 		fontSize:"14sp",
 		fontWeight:"bold"
-	},
-	text:"找什么攻略,搜搜看..."
+	}
+	
 }
 "#searchOverlay":{
 	left:"5dp",

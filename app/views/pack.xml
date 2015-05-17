@@ -1,5 +1,5 @@
 <Alloy>
-	<View class="container">
-		
+	<View id="packback">
+		<Require type="view" id="" />
 	</View>
 </Alloy>

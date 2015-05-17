@@ -1,0 +1,26 @@
+
+"#background":{
+	layout:"horizontal",
+	height:Ti.UI.SIZE,
+	backgroundColor:Alloy.CFG.COLORS.DarkBlack
+},
+"#title":{
+	color:Alloy.CFG.COLORS.LightBrown,
+	font:{
+		fontSize:"15sp"
+	},
+	left:"10dp",
+	height:"20dp",
+	top:"5dp",
+	bottom:"5dp"
+},
+"#body":{
+	color:Alloy.CFG.COLORS.LightBrown,
+	font:{
+		fontSize:"15sp"
+	},
+	left:"20dp",
+	height:"20dp",
+	top:"5dp",
+	bottom:"5dp"
+}

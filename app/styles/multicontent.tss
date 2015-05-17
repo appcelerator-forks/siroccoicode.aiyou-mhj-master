@@ -1,3 +1,14 @@
 "#multiback":{
 	layout:"vertical"
+},
+"#topDropDownBack":{
+	backgroundColor:Alloy.CFG.COLORS.DarkBlack,
+	height:Ti.UI.SIZE
+},
+"#topDropDown":{
+	top:"0dp",
+	bottom:"15dp",
+	width:"30dp",
+	height:"20dp",
+	image:"/imgres/dropdown.png"
 }

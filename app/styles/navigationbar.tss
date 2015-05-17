@@ -1,8 +1,8 @@
 
-'#backbutton':{
-	font:{
-		size:"20dp"
-	}
+'#appLogo':{
+	width:"35dp",
+	height:"35dp",
+	image:"/imgres/applogo.png"
 },
 '.container':{
 	top:"0dp",

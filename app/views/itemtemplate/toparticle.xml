@@ -1,5 +1,5 @@
 <Alloy>
-	<ItemTemplate name="toparticle">
+	<ItemTemplate name="toparticle" height=Ti.UI.SIZE>
 		<View id="background">
 			<ImageView id="logo">
 				<ImageView id="laba" />

@@ -1,9 +1,21 @@
 "#logo":{
-	image:"/imgres/toparticlelogo.png"
+	image:"/imgres/toparticlelogo.png",
+	left:"10dp",
+	top:"5dp",
+	bottom:"5dp",
+	width:"45dp",
+	height:"45dp"
 },
 "#toparticletitle":{
-	
+	left:"18dp",
+	font:{
+		fontSize:"15sp"
+	},
+	color:Alloy.CFG.COLORS.LightBrown,
+	height:"25dp"
 }
 "#background":{
-	height:Ti.UI.SIZE
+	height:Ti.UI.SIZE,
+	layout:"horizontal",
+	backgroundColor:Alloy.CFG.COLORS.DarkBlack
 }

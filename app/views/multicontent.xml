@@ -1,28 +1,28 @@
 <Alloy>
 	<View id="multiback">
+		<Widget src="nl.fokkezb.pullToRefresh" id="ptr" onRelease="myrefresh" cusvalue="3">
 		<ListView id="multilist">
 			<Templates>
 				<Require src="/itemtemplate/toparticle"/>
-				<Require src="toppack" />
 				<Require src="/itemtemplate/article"/>
 				<Require src="/itemtemplate/articlepic"/>
 			</Templates>
-			
 			<ListSection>
 				<HeaderView>
+				<Require src="toppack" id="toppack"/>
 				</HeaderView>
-				<ListItem template="toppack"/>
-				<ListItem title="Apple" template="toparticle"/>
-                <ListItem title:text="Orange" template="toparticle" />
-                <ListItem title:text="Pear" template="toparticle" />
+			</ListSection>
+			<ListSection id="toparticle">
 				<FooterView>
-					<View backgroundColor="#fff">
-						<Label text="siss" />
+					<View id="topDropDownBack">
+						<ImageView id="topDropDown" onClick="loadTopArticle"/>
 					</View>
 				</FooterView>
 			</ListSection>
-			<ListSection>
+			<ListSection id="article">
 			</ListSection>
+			<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="loadMore" />
 		</ListView>
+		</Widget>
 	</View>
 </Alloy>

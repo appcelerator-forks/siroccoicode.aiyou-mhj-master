@@ -1,4 +1,5 @@
 
-".container" : {
-  
+"#packback" : {
+  layout:"vertical",
+  bottom:"60dp"
 }

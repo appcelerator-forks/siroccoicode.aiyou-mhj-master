@@ -2,7 +2,7 @@
 	<View class="container">
 		<Widget id="navBar" src="club.siroccoicode.navbar">
 			<View id="back" role="leftView">
-				<Label id="backbutton" text="back"/>
+				<ImageView id="appLogo"/>
 			</View>
 			<View id="title" role="titleView">
 				<Widget id="segment" src="club.siroccoicode.segement"/>
