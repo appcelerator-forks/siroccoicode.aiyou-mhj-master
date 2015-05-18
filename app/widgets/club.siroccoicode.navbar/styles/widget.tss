@@ -11,7 +11,7 @@
 	height: Ti.UI.FILL,
 	width: Ti.UI.FILL,
 	left: "0dp",
-	top: "0dp"
+	top: "0dp",
 },
 "#leftView": {
 	top: "0dp",
@@ -31,4 +31,5 @@
 	width: Ti.UI.FILL,
 	height: "47dp",
 	backgroundColor: "#fff"
+
 },

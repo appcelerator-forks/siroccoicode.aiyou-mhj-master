@@ -1,0 +1,19 @@
+<Alloy>
+	<ItemTemplate name="packmaster" height=Ti.UI.SIZE>
+		<View id="masterback">
+			<ImageView id="packicon" bindId="icon"/>
+			<View id="textarea">
+				<Label id="packname" bindId="title"/>
+				<View id="bottomline">
+					<Label id="surplus" bindId="surplus"/>
+					<View id="aiyouback">
+						<Label id="aiyou" bindId="aiyou"/>
+						<ImageView id="aiyoucoin"/>
+					</View>
+				</View>	
+			</View>
+			<ImageView id="indicator" bindId="indicator"/>
+			<Button id="test" bindId="testButton" onClick="hahaha"/>
+		</View>
+	</ItemTemplate>
+</Alloy>

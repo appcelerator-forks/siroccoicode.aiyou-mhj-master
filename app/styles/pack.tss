@@ -1,5 +1,8 @@
 
-"#packback" : {
+"#packbackground" : {
   layout:"vertical",
   bottom:"60dp"
+},
+"#packback":{
+	top: "0dp"
 }

@@ -1,0 +1,33 @@
+"#background":{
+	layout: "composite",
+	height: "60dp",
+
+},
+"#wrapper":{
+	width:Ti.UI.SIZE,
+	layout:"horizontal",
+	height: "60dp"
+},
+"#allpack":{
+	text:"全部礼包",
+	font:{
+		fontSize:"12sp",
+	},
+	height:"60dp",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+},
+"#mypack":{
+	text: "我的礼包",
+	font: {
+		fontSize: "12sp",
+	},
+	height: "60dp",
+	left:"10dp",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+},
+"#float":{
+
+},
+"#naviBarBack":{
+	height:"60dp"
+}

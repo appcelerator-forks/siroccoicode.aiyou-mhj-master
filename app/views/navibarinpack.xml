@@ -1,0 +1,15 @@
+<Alloy>
+	<View id="naviBarBack">
+		<Widget id="navBar" src="club.siroccoicode.navbar">
+			<View id="title" role="titleView">
+				<View id="background">
+					<View id="wrapper">
+						<Label id="allpack"/>
+						<Label id="mypack" />
+					</View>
+					<View id="float"/>
+				</View>
+			</View>
+		</Widget>
+	</View>
+</Alloy>

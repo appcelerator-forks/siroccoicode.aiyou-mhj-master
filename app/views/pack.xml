@@ -1,5 +1,18 @@
 <Alloy>
-	<View id="packback">
-		<Require type="view" id="" />
+	<View id="packbackground">
+		<Require type="view" id="navbar" src="navibarinpack" />
+		<View id="packback">
+			<Widget src="nl.fokkezb.pullToRefresh" id="ptr" onRelease="myrefresh" cusvalue="2">
+				<ListView id="packlist">
+					<Templates>
+						<Require src="/itemtemplate/packmaster"/>
+						<Require src="/itemtemplate/packdetail"/>
+					</Templates>
+					<ListSection id="packlistsection">
+					</ListSection>
+					<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="loadMore" />
+				</ListView>
+			</Widget>
+	      </View>
 	</View>
 </Alloy>

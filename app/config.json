@@ -17,7 +17,8 @@
       "LightYellow": "#fff298",
       "LightBlack": "#363434",
       "DarkBlack": "#312f2f",
-      "DeepBlack": "#1c1919"
+      "DeepBlack": "#1c1919",
+      "AiyouRed":"#e74c3c"
     }
   },
   "env:development": {},
