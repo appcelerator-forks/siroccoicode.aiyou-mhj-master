@@ -65,8 +65,11 @@ function error(e,type){
 function bindViewForDetailItem(){
 
 }
-function hahaha(e){
-	alert(e);
+function dropdown(e){
+	
+}
+function closedetail(e){
+	
 }
 function bindView(dataList){
     var itemList=[];
@@ -78,7 +81,8 @@ function bindView(dataList){
                         icon:{image:element.icon},
                         title:{text:element.title},
                         aiyou:{text:element.price},
-            			testButton:{onClick:hahaha}
+
+            			}}
                   };
                     itemList.push(item);
        });

@@ -5,4 +5,112 @@
 },
 "#packback":{
 	top: "0dp"
+},
+// maseter template
+"#masterback":{
+	height: Ti.UI.SIZE,
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
+},
+"#packicon":{
+	top:"10dp",left:"10dp",bottom:"10dp",
+	width: "45dp",height: "45dp",
+	borderRadius: "8"
+},
+"#textarea":{
+	top:"10dp",left: "65dp",right: "40dp",bottom: "10dp",
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
+	layout: "vertical",
+	height: Ti.UI.SIZE,
+
+},
+"#masterindicator":{
+	width:"20dp",height: "20dp",right: "10dp",
+	image:"/imgres/masterdropdown.png"
+},
+"#test":{
+title: "test",
+width:"40dp",height: "40dp",right: "10dp"
+	},
+"#packname":{
+	font: {
+		fontSize: "15sp"
+	},
+	color: Alloy.CFG.COLORS.LightBrown,
+	height: "25dp",
+
+},
+"#bottomline":{
+	top:"10dp",
+	width: Ti.UI.SIZE,
+	layout: "horizontal",
+	height: Ti.UI.SIZE,
+
+},
+"#surplus":{
+	font: {
+		fontSize: "13sp"
+	},
+	color: Alloy.CFG.COLORS.LightBrown,
+	height: "15dp"
+},
+"#aiyouback":{
+	layout:"horizontal",
+	height: "15dp"
+},
+"#aiyou":{
+	font:{
+		fontSize: "12sp"
+	},
+	color: Alloy.CFG.COLORS.AiyouRed
+},
+"#masteraiyoucoin":{
+	left: "5dp",
+	width: "12dp",height: "12dp",
+	image:"/imgres/aiyoucoin.png"
 }
+
+//detail 
+"#detailback":{
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack
+	height: Ti.UI.SIZE,
+	layout: "vertical"
+},
+".predesc":{
+	font: {
+		fontSize: "12sp"
+	},
+	color: Alloy.CFG.COLORS.DarkBrown,
+	height: "20dp",
+	top: "0dp",left: "10dp",
+},
+".line":{
+	height: Ti.UI.SIZE,
+	top:"10dp",
+	layout: "horizontal"
+}
+".detaillabel":{
+	left: "10dp"
+	color:Alloy.CFG.COLORS.LightBrown,
+	font:{
+		fontSize: "12sp"
+	},
+},
+"#bottomline":{
+	top:"20dp",
+	height:"40dp",
+	bottom: "10dp",
+},
+"#mywallet":{
+	image:"/imgres/wallet.png",
+},
+"#aiyoucoinback":{
+	backgroundImage:"/imgres/walletback.png"
+},
+"#detailaiyouicon":{
+	width: "10dp",
+	height: "10dp",
+}
+"#detailindicator":{
+	image:"/imgres/detailclose.png"
+}
+

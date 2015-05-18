@@ -2,11 +2,56 @@
 	<View id="packbackground">
 		<Require type="view" id="navbar" src="navibarinpack" />
 		<View id="packback">
-			<Widget src="nl.fokkezb.pullToRefresh" id="ptr" onRelease="myrefresh" cusvalue="2">
+			<Widget src="nl.fokkezb.pullToRefresh" id="ptr" onRelease="myrefresh" cusvalue="0">
 				<ListView id="packlist">
 					<Templates>
-						<Require src="/itemtemplate/packmaster"/>
-						<Require src="/itemtemplate/packdetail"/>
+						<ItemTemplate name="packmaster" height=Ti.UI.SIZE>
+							<View id="masterback">
+								<ImageView id="packicon" bindId="icon"/>
+								<View id="textarea">
+									<Label id="packname" bindId="title"/>
+									<View id="bottomline">
+										<Label id="surplus" bindId="surplus"/>
+										<View id="aiyouback">
+											<Label id="aiyou" bindId="aiyou"/>
+											<ImageView id="masteraiyoucoin"/>
+										</View>
+									</View>	
+								</View>
+								<ImageView id="masterindicator" bindId="masterindicator" onClick="dropdown"/>
+							</View>
+						</ItemTemplate>
+						<ItemTemplate name="packdetail" height=Ti.UI.SIZE>
+							<View id="detailback">
+								<View class="line">
+									<Label class="predesc" text=""/>
+									<Label id="goods" bindId="goods" class="detailabel"/>
+								</View>
+								<View class="line">
+									<Label class="predesc" text="" />
+									<Label id="methods" bindId="methods" class="detailabel" />
+								</View>
+								<View class="line">
+									<Label class="predesc" text="" />
+									<Label id="saletime" bindId="saletime" class="detailabel" />
+								</View>
+								<View class="line">
+									<Label class="predesc" text="" />
+									<Label id="expiretime" bindId="expiretime" class="detailabel" />
+								</View>
+								<View id="bottomline">
+									<Button id="getbutton"/>
+									<View id="mywallet">
+										<ImageView id="walleticon"/>
+										<View id="aiyoucoinback">
+											<Label id="aiyoucoin" bindId="aiyoucoin"/>
+											<ImageView id="detailaiyouicon"/>
+										</View>
+									</View>
+									<ImageView id="detailindiactor" bindId="detailindiactor" onClick="closedetail"/>
+								</View>
+							</View>
+						</ItemTemplate>
 					</Templates>
 					<ListSection id="packlistsection">
 					</ListSection>
