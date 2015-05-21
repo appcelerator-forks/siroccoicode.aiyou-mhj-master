@@ -24,13 +24,9 @@
 
 },
 "#masterindicator":{
-	width:"20dp",height: "20dp",right: "10dp",
+	width:"15dp",height: "15dp",right: "10dp",
 	image:"/imgres/masterdropdown.png"
 },
-"#test":{
-title: "test",
-width:"40dp",height: "40dp",right: "10dp"
-	},
 "#packname":{
 	font: {
 		fontSize: "15sp"
@@ -39,8 +35,7 @@ width:"40dp",height: "40dp",right: "10dp"
 	height: "25dp",
 
 },
-"#bottomline":{
-	top:"10dp",
+"#masterbottomline":{
 	width: Ti.UI.SIZE,
 	layout: "horizontal",
 	height: Ti.UI.SIZE,
@@ -67,11 +62,11 @@ width:"40dp",height: "40dp",right: "10dp"
 	left: "5dp",
 	width: "12dp",height: "12dp",
 	image:"/imgres/aiyoucoin.png"
-}
+},
 
 //detail 
 "#detailback":{
-	backgroundColor: Alloy.CFG.COLORS.DarkBlack
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
 	height: Ti.UI.SIZE,
 	layout: "vertical"
 },
@@ -88,8 +83,8 @@ width:"40dp",height: "40dp",right: "10dp"
 	top:"10dp",
 	layout: "horizontal"
 }
-".detaillabel":{
-	left: "10dp"
+".detailabel":{
+	left: "10dp",
 	color:Alloy.CFG.COLORS.LightBrown,
 	font:{
 		fontSize: "12sp"
@@ -99,18 +94,51 @@ width:"40dp",height: "40dp",right: "10dp"
 	top:"20dp",
 	height:"40dp",
 	bottom: "10dp",
+
 },
 "#mywallet":{
-	image:"/imgres/wallet.png",
+	left:"45dp",
+	width: Ti.UI.SIZE,
+	layout: "horizontal"
+},
+"#walleticon":{
+	image:"/imgres/aiyoucoin.png",
+	width:"15dp",
+	height: "15dp",
 },
 "#aiyoucoinback":{
-	backgroundImage:"/imgres/walletback.png"
+	backgroundImage:"/imgres/walletback.png",
+	layout:"horizontal",
+	width:Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	left:"5dp" 
 },
 "#detailaiyouicon":{
 	width: "10dp",
 	height: "10dp",
-}
+	image:"/imgres/aiyoucoin.png"
+},
 "#detailindicator":{
 	image:"/imgres/detailclose.png"
+},
+"#aiyoucoin":{
+	color: Alloy.CFG.COLORS.AiyouRed,
+	font:{
+		fontSize: "10sp"
+	},
+	width: Ti.UI.SIZE,
+	left: "3dp"
+}
+"#getbutton":{
+	width: "55dp",
+	top: "0dp",
+	height: "30dp",
+	title: "领取",
+	backgroundImage:"/imgres/getback.png",
+	color: Alloy.CFG.COLORS.LightBrown
+},
+"#detailindiactor":{
+	image:"/imgres/detailclose.png",
+	width:"15dp",height: "15dp",right: "10dp",top: "0dp"
 }
 

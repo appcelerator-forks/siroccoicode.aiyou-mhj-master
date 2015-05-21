@@ -1,0 +1,19 @@
+<Alloy>
+	<View id="naviBarBack">
+		<Widget id="navBar" src="club.siroccoicode.navbar">
+			<View id="left" role="leftView" >
+				<ImageView id="back" />
+			</View>
+			<View id="right" role="rightView">
+				<View class="funcButtonBack">
+					<ImageView id="collect" class="icon"/>
+					<Label id="collectnumber" class="number"/>
+				</View>	
+				<View class="funcButtonBack">
+					<ImageView id="zan" class="icon"/>
+					<Label id="zannumber" class="number"/>
+				</View>	
+			</View>	
+		</Widget>
+	</View>
+</Alloy>

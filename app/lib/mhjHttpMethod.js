@@ -4,7 +4,7 @@
 var requestUrlList={
 	articleList:"/article/list?",
 	packList:"/gift/list?",
-	packInfo:"",
+	packInfo:"/gift/entity?",
 	articleInfo:"",
 	login:"/user/login",
 	getPack:"",

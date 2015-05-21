@@ -10,7 +10,7 @@
 								<ImageView id="packicon" bindId="icon"/>
 								<View id="textarea">
 									<Label id="packname" bindId="title"/>
-									<View id="bottomline">
+									<View id="masterbottomline">
 										<Label id="surplus" bindId="surplus"/>
 										<View id="aiyouback">
 											<Label id="aiyou" bindId="aiyou"/>
@@ -24,30 +24,32 @@
 						<ItemTemplate name="packdetail" height=Ti.UI.SIZE>
 							<View id="detailback">
 								<View class="line">
-									<Label class="predesc" text=""/>
+									<Label class="predesc" text="礼包物品"/>
 									<Label id="goods" bindId="goods" class="detailabel"/>
 								</View>
 								<View class="line">
-									<Label class="predesc" text="" />
+									<Label class="predesc" text="使用方法" />
 									<Label id="methods" bindId="methods" class="detailabel" />
 								</View>
 								<View class="line">
-									<Label class="predesc" text="" />
+									<Label class="predesc" text="出售时间" />
 									<Label id="saletime" bindId="saletime" class="detailabel" />
 								</View>
 								<View class="line">
-									<Label class="predesc" text="" />
+									<Label class="predesc" text="有效期至" />
 									<Label id="expiretime" bindId="expiretime" class="detailabel" />
 								</View>
 								<View id="bottomline">
-									<Button id="getbutton"/>
+									
 									<View id="mywallet">
 										<ImageView id="walleticon"/>
 										<View id="aiyoucoinback">
 											<Label id="aiyoucoin" bindId="aiyoucoin"/>
 											<ImageView id="detailaiyouicon"/>
 										</View>
+
 									</View>
+									<Button id="getbutton"/>
 									<ImageView id="detailindiactor" bindId="detailindiactor" onClick="closedetail"/>
 								</View>
 							</View>

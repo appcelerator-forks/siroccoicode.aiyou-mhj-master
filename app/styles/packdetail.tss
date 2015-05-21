@@ -1,5 +1,5 @@
 "#detailback":{
-	backgroundColor: Alloy.CFG.COLORS.DarkBlack
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
 	height: Ti.UI.SIZE,
 	layout: "vertical"
 },
@@ -15,9 +15,9 @@
 	height: Ti.UI.SIZE,
 	top:"10dp",
 	layout: "horizontal"
-}
+},
 ".detaillabel":{
-	left: "10dp"
+	left: "10dp",
 	color:Alloy.CFG.COLORS.LightBrown,
 	font:{
 		fontSize: "12sp"

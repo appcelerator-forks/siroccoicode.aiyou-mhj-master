@@ -34,6 +34,14 @@ Alloy.Globals.translateForGET=function(params){
       }
       
 };
+//全App页面栈
+Alloy.Globals.Navigator = {};
+Alloy.Globals.initNavigation = function() {   
+  // Require in the navigation module
+    Alloy.Globals.Navigator = require("navigation")({
+        parent: Alloy.Globals.navigationWindow || null
+    });
+};
 
 Alloy.Globals.checkURL=function(element){
     if(typeof element.author_pic != 'undefined')
@@ -41,8 +49,12 @@ Alloy.Globals.checkURL=function(element){
         
     }  
 };
-
-Alloy.Globals.stamptotime=function(timestamp){
+//XX年XX月XX日
+Alloy.Globals.stamptotime=function(timestamp,type){
+  if (type =='/') {
+    var date=new Date(parseInt(timestamp) * 1000);
+    return date.getFullYear()+"/"+date.getMonth()+"/"+date.getDay();
+  };
     var date=new Date(parseInt(timestamp) * 1000);
     return date.getFullYear()+"年"+date.getMonth()+"月"+date.getDay()+"日"+date.getHours()+":"+date.getMinutes();
 };
