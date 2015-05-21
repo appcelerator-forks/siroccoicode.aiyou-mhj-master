@@ -22,7 +22,7 @@
 "#rightView": {
 	top: "0dp",
 	right: "0dp",
-	width: "48dp",
+	width: Ti.UI.SIZE,
 	height: "47dp"
 },
 "#Wrapper": {

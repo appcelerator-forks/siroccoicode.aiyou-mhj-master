@@ -1,4 +1,6 @@
 <Alloy>
-	<View class="container">
-	</View>
+	<Window id="window" navBarHidden="true">
+		<View id="center"/>
+		<Require type="widget" src="me.wslong.tiTabs" id="tabGroup" />
+	</Window>
 </Alloy>

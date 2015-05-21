@@ -1,4 +1,44 @@
 
-".container" : {
-  
+"#naviBarBack" : {
+  height:"60dp"
+},
+"#back":{
+	image:"/imgres/navBack.png",
+	width:"10dp",
+	height:"10dp"
+},
+"#collect":{
+	image:"/imgres/collect.png"
+	},
+"#zan":{
+	image:"/imgres/zan.png"
+},
+"#collectnumber":{
+	text: "2324"
+	},
+"#zannumber":{
+	text: "2343"
+	},
+".Icon":{
+	width: "20dp",
+	height: "20dp"
+},
+".FuncButtonBack":{
+	layout:"horizontal",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
+},
+".Numbera":{
+	width: Ti.UI.SIZE,
+	height: "20dp",
+	font: {
+		fontSize:"12sp"
+	},
+	color:Alloy.CFG.COLORS.LightBrown
+}	
+"#rightback":{
+	right: "0dp",
+	layout:"horizontal",
+	width:"100dp",
+	height:Ti.UI.FILL
 }

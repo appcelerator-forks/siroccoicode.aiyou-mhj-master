@@ -5,14 +5,16 @@
 				<ImageView id="back" />
 			</View>
 			<View id="right" role="rightView">
-				<View class="funcButtonBack">
-					<ImageView id="collect" class="icon"/>
-					<Label id="collectnumber" class="number"/>
+				<View id="rightback">
+				<View class="FuncButtonBack">
+					<ImageView id="collect" class="Icon"/>
+					<Label id="collectnumber" class="Numbera"/>
 				</View>	
-				<View class="funcButtonBack">
-					<ImageView id="zan" class="icon"/>
-					<Label id="zannumber" class="number"/>
+				<View class="FuncButtonBack">
+					<ImageView id="zan" class="Icon"/>
+					<Label id="zannumber" class="Numbera"/>
 				</View>	
+			</View>
 			</View>	
 		</Widget>
 	</View>

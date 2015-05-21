@@ -1,6 +1,3 @@
 <Alloy>
-	<Window class="container">
-		<View id="center"/>
-		<Require type="widget" src="me.wslong.tiTabs" id="tabGroup" />
-	</Window>
+
 </Alloy>

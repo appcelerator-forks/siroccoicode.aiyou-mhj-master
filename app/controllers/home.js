@@ -11,9 +11,8 @@
 			$.scroll.views       =[multiContentView,gonglue,novelsView];
 			
 			$.navbar.getView('btnMenu').addEventListener("click",function(e){
-			alert(e);
-			// var  articleinfo  =Alloy.CreatController("articleinfo",{articleid:}).getView();
-			// articleinfo.open();
+			var articleinfo=Alloy.createController("articleinfo");
+			Alloy.Globals.Navigator.push(articleinfo);
 			
 			});
 			
