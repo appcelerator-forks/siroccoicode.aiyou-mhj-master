@@ -1,0 +1,28 @@
+<Alloy>
+	<Window id="window" navBarHidden="true">
+		<Require type="view" src="navbarinarticle"/>
+		<ListView id="article">
+			<Templates>
+			<!-- 	<ItemTemplate name="commenttitle" height=Ti.UI.SIZE>
+					<Label text="评论"/>
+					<Label id="commentNumber"/>
+				</ItemTemplate> -->
+				<ItemTemplate name="mastercomment">
+					<View id="mcback">
+						<Label />
+					</View>
+				</ItemTemplate>
+				<ItemTemplate name="detailcomment">
+					<View id="dcback">
+						<Label/>
+						<Label/>
+					</View>
+				</ItemTemplate>
+			</Templates>
+				<HeaderView>
+				</HeaderView>
+				<FooterView>
+				</FooterView>
+		</ListView>
+	</Window>
+</Alloy>
