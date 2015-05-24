@@ -18,7 +18,15 @@
       "LightBlack": "#363434",
       "DarkBlack": "#312f2f",
       "DeepBlack": "#1c1919",
-      "AiyouRed":"#e74c3c"
+      "AiyouRed":"#e74c3c",
+      "LightGray":"#b5a99f",
+      "DarkGray":"#605c5c"
+    },
+    "EVENTKEYS":{
+      "COLLECTKEY":"373737",
+      "PACKKEY":"373738",
+      "SETTINGKEY":"373739",
+      "USERKEY":"373740"
     }
   },
   "env:development": {},

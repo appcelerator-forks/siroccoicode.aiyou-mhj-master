@@ -1,4 +1,56 @@
 <Alloy>
-	<View class="container">		
+	<View id="personalBack">
+		<View id="naviBar">
+			<Label id="title"/>
+		</View>
+		<ListView id="settinglist">
+			<Templates>
+				<ItemTemplate name="usertemplate" height=Ti.UI.SIZE>
+					<View class="itemback">
+						<ImageView id="usericon" bindId="usericon"/>
+						<View id="rightInfo">
+							<Label id="username" bindId="username"/>
+							<View id="bottomline">
+								<Label id="rank" bindId="rank" class="bottomlabel"/>
+								<View id="aiyoucoin">
+									<Label class="bottomlabel" text="爱游果"/>
+									<Label class="bottomlabel" bindId="aiyou"/>
+									<ImageView id="aiyouicon"/>
+								</View>
+							</View>
+						</View>
+					</View>
+				</ItemTemplate>
+				<ItemTemplate name="setting" height=Ti.UI.SIZE>
+					<View class="itemback">
+						<ImageView id="icon" bindId="icon"/>
+						<Label id="settingtitle" bindId="settingtitle"/>
+					</View>
+				</ItemTemplate>
+			</Templates>
+			<ListSection>
+				<HeaderView>
+					<View class="sectionHeader"/>
+				</HeaderView>
+				<ListItem template="usertemplate"/>
+			</ListSection>
+
+			<ListSection>
+				<HeaderView>
+					<View class="sectionHeader"/>
+				</HeaderView>
+				<ListItem template="setting" icon:image="/imgres/mycollect.png" settingtitle:text="我的收藏" id="collectitem"/>
+				<ListItem template="setting" icon:image="/imgres/mypack.png" settingtitle:text="我的礼包" id="packitem"/>
+			</ListSection>
+
+			<ListSection>
+				<HeaderView>
+					<View class="sectionHeader"/>
+				</HeaderView>
+				<ListItem template="setting" icon:image="/imgres/settingicon.png" settingtitle:text="设置" id="settingitem"/>
+			</ListSection>
+
+
+		</ListView>
 	</View>
 </Alloy>

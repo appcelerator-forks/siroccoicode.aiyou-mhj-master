@@ -11,6 +11,31 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 
+
+Alloy.Globals.Device = {
+  version: Ti.Platform.version,
+  versionMajor: parseInt(Ti.Platform.version.split(".")[0], 10),
+  versionMinor: parseInt(Ti.Platform.version.split(".")[1], 10),
+  width: (Ti.Platform.displayCaps.platformWidth > Ti.Platform.displayCaps.platformHeight) ? Ti.Platform.displayCaps.platformHeight : Ti.Platform.displayCaps.platformWidth,
+  height: (Ti.Platform.displayCaps.platformWidth > Ti.Platform.displayCaps.platformHeight) ? Ti.Platform.displayCaps.platformWidth : Ti.Platform.displayCaps.platformHeight,
+  dpi: Ti.Platform.displayCaps.dpi,
+  orientation: Ti.Gesture.orientation == Ti.UI.LANDSCAPE_LEFT || Ti.Gesture.orientation == Ti.UI.LANDSCAPE_RIGHT ? "landscape" : "portrait"
+};
+
+if(OS_ANDROID) {
+  Alloy.Globals.Device.width = (Alloy.Globals.Device.width / (Alloy.Globals.Device.dpi / 160));
+  Alloy.Globals.Device.height = (Alloy.Globals.Device.height / (Alloy.Globals.Device.dpi / 160));
+}
+
+Alloy.Globals.dpToPx = function(dp) {
+  return dp * (Ti.Platform.displayCaps.platformHeight / Alloy.Globals.Device.height);
+};
+
+Alloy.Globals.pxToDp = function(px) {
+  return px * (Alloy.Globals.Device.height / Ti.Platform.displayCaps.platformHeight);
+};
+
+
 Alloy.Globals.isLogin=function(){
     if(Ti.App.Properties.getString(Alloy.CFG.kUSERID,'0') != '0'){
         return true;
@@ -57,4 +82,32 @@ Alloy.Globals.stamptotime=function(timestamp,type){
   };
     var date=new Date(parseInt(timestamp) * 1000);
     return date.getFullYear()+"年"+date.getMonth()+"月"+date.getDay()+"日"+date.getHours()+":"+date.getMinutes();
+};
+
+Alloy.Globals.translateContentHtml=function(contentdict){
+  var htmlContent="";
+  var htmlString={
+    start:"<Html><head><meta name='viewport' content='width=device-width,initial-scale=1, maximum-scale=1,user-scalable=no;'/><style type='text/css'> body {background-color:#312f2f;font-size:13px;}</style></head><Body>",
+    end:"</Body></Html>"
+  };
+  var wordsProperties={
+    start:"<p style='margin:10px'><font color='#aea399'>",
+    end:"</font></p>"
+  };
+  var picProperties={
+    start:"<p style='text-align:center;' ><img style='display:block;width:100%;'src='",
+    end:"'></p>"
+  };
+  htmlContent =htmlContent+htmlString.start;
+  _.each(contentdict,function(element,index,list){
+      if (element.indexOf("http")==0||element.indexOf("HTTP")==0) {
+        htmlContent = htmlContent + picProperties.start+element+picProperties.end;
+      }else{
+        htmlContent = htmlContent + wordsProperties.start+element+wordsProperties.end;
+      }
+  });
+  htmlContent = htmlContent+htmlString.end;
+  Ti.API.info("htmlContent",htmlContent);
+  return htmlContent;
+
 };

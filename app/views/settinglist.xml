@@ -1,0 +1,48 @@
+<Alloy>
+	<Window id="window" navBarHidden=true>
+		<View class="container">
+			<View id="navBar">
+			</View>
+			<ListView>
+				<Templates>
+					<ItemTemplate name="normalsetting" height=Ti.UI.SIZE>
+						<View class="back">
+							<Label class="setting" bindId="settingtitle" />
+							<ImageView id="detail" />
+						</View>
+					</ItemTemplate>
+					<ItemTemplate name="switchsetting" height=Ti.UI.SIZE>
+						<View class="back">
+							<Label class="setting" bindId="settingtitle"/>
+							<Switch id="imageswitch" bindId="imageswitch" />
+						</View>
+					</ItemTemplate>
+				</Templates>
+
+				<ListSection>
+					<HeaderView>
+						<View class="sectionheader"/>
+					</HeaderView>
+					<ListItem template="normalsetting" settingtitle:text="修改密码"/>
+				</ListSection>
+
+				<ListSection>
+					<HeaderView>
+						<View class="sectionheader"/>
+					</HeaderView>
+					<ListItem template="normalsetting"  settingtitle:text="手机绑定"/>
+					<ListItem template="switchsetting" settingtitle:text="图片加载"/>
+				</ListSection>
+
+				<ListSection>
+					<HeaderView>
+						<View class="sectionheader"/>
+					</HeaderView>
+					<ListItem template="normalsetting" settingtitle:text="关于蛮荒记助手"/>
+					<ListItem template="normalsetting" settingtitle:text="版本"/>
+				</ListSection>
+
+			</ListView>
+		</View>
+	</Window>
+</Alloy>

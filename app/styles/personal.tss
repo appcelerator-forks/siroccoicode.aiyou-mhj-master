@@ -1,4 +1,77 @@
 
-".container" : {
-  
+"#personalBack" : {
+  layout:"vertical",
+  bottom: "60dp"
+},
+"#naviBar":{
+	height: "60dp",
+},
+
+
+//=============================用户模板
+".itemback":{
+	height:Ti.UI.SIZE,
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
+	layout:"horizontal"
+},
+"#usericon":{
+	borderRadius: "8",
+	width: "45dp",
+	height: "45dp", 
+	top:"15dp",
+	left:"15dp",
+	bottom: "15dp",
+	defaultImage: "/imgres/defaultuser.png"
+},
+"#rightInfo":{
+	layout:"vertical",
+	height: Ti.UI.SIZE,
+},
+"#bottomline":{
+	height:"20dp",
+	layout: "horizontal",
+},
+"#aiyoucoin":{
+	layout: "horizontal"
+},
+"#aiyouicon":{
+	image:"/imgres/aiyoucoin.png" ,
+	width: "10dp",
+	height: "10dp"
+},
+".bottomlabel":{
+	color: Alloy.CFG.COLORS.DarkBrown,
+	font: {
+		fontSize: "12sp"
+	}
+},
+//=============================普通设置项模板
+"#icon":{
+	width: "15dp",
+	height: "15dp",
+	left: "15dp",
+	top: "15dp",
+	bottom: "15dp",
+},
+"#settingtitle":{
+	left: "10dp",
+	height: "20dp",
+	font: {
+		fontSize: "15sp"
+	},
+	color: Alloy.CFG.COLORS.LightBrown
+},
+//===========================
+".sectionHeader":{
+	backgroundColor: Alloy.CFG.COLORS.LightBlack,
+	height: "15dp",
+},
+"#settingitem":{
+	eventKey:Alloy.CFG.EVENTKEYS.SETTINGKEY,
+},
+"#packitem":{
+	eventKey:Alloy.CFG.EVENTKEYS.PACKKEY,
+},
+"#collectitem":{
+	eventKey:Alloy.CFG.EVENTKEYS.COLLECTKEY,
 }

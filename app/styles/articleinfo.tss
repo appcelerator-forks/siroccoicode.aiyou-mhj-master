@@ -1,4 +1,101 @@
 
-"#window" : {
+"#back" : {
   layout: "vertical"
+},
+//================================头部样式===========================================
+"#headerBack":{
+	height: "195dp",
+	layout:"vertical",
+	backgroundColor: "#234523"
+},
+"#titleback":{
+	height:"70dp",
+},
+"#articletitle":{
+	font: {
+		fontSize: "18sp"
+	},
+	color:Alloy.CFG.COLORS.LightGray
+},
+"#headerbottomline":{
+ layout: "horizontal",
+ height:"25dp",
+	},
+".bottomlabel":{
+ font:{
+ 	fontSize: "12sp"
+ },
+ color: Alloy.CFG.COLORS.DarkGray
+	},
+"#articlecontent":{
+height: "0dp"
+	},
+"#commentText":{
+	text:"评论",
+	font: {
+		fontSize: "18sp"
+	},
+	color:Alloy.CFG.COLORS.LightGray,
+	height: "25dp",
+	top:"0dp"
+},
+
+
+//===============================主评论样式========================================
+// "#":{
+
+// },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//===============================子评论样式==========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=================================输入框样式========================================
+"#postcomment":{
+	title:"fabiao"
+},
+"#inputbar":{
+	height: "20dp",
+	top:"0dp"
 }
