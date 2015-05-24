@@ -26,7 +26,21 @@
       "COLLECTKEY":"373737",
       "PACKKEY":"373738",
       "SETTINGKEY":"373739",
-      "USERKEY":"373740"
+      "USERKEY":"373740",
+      "BINDPHONE":"373741",
+      "CHANGEPASSWORD":"373742",
+      "ABOUTAPP":"373743",
+    },
+    "PLKEYS":{
+      "LOADPIC":"isLoadPic",
+      "PRESENTUSER":"presentUser",
+      "RECENTUSER":"recentUser",
+      "USERINFO":"userInfo",
+      "EXTUSERINFO":"extUserInfo",
+      "DEVICETOKEN":"deviceToken",
+      "GETUICID":"getuiCID",
+      "APPCHECKED":"appChecked"
+
     }
   },
   "env:development": {},
