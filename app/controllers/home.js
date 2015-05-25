@@ -8,8 +8,11 @@
 			Ti.App.Properties.setString(Alloy.CFG.kAPIHOST,"http://openapi.aiyou.com");
 			Ti.App.Properties.setString(Alloy.CFG.kAPIVERSION,"v1");
 			http.HttpPOST('login',Alloy.Globals.translateForGET({pwd:"6915158x",flag:"18667048968"}),{},success,error,true);
-			$.scroll.views       =[multiContentView,gonglue,novelsView];
-			
+			var scrollAbleView=Ti.UI.createScrollableView({
+				views:[multiContentView,gonglue,novelsView]
+			});
+			//$.scroll.views       =[multiContentView,gonglue,novelsView];
+			$.homeback.add(scrollAbleView);
 			$.navbar.getView('btnMenu').addEventListener("click",function(e){
 			var articleinfo=Alloy.createController("articleinfo");
 			Alloy.Globals.Navigator.push(articleinfo);

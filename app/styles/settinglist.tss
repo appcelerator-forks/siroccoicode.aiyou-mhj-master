@@ -33,7 +33,7 @@
 	backgroundColor: Alloy.CFG.COLORS.LightBlack
 },
 "#bindPhone":{
-	eventKey:Alloy..CFG.EVENTKEYS.BINDPHONE
+	eventKey:Alloy.CFG.EVENTKEYS.BINDPHONE
 },
 "#changePassword":{
 	eventKey:Alloy.CFG.EVENTKEYS.CHANGEPASSWORD

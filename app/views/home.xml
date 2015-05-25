@@ -2,9 +2,7 @@
 <View id="back">
 	<View id="homeback">
 		<Require type="view" src="navigationbar" id="navbar" />	
-		<ScrollableView id='scroll'>
-			<!-- 综合、礼包、小说-->
-		</ScrollableView>
+		
 	</View>
 </View>
 </Alloy>

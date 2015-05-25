@@ -3,7 +3,7 @@
 		<View class="container">
 			<View id="navBar">
 			</View>
-			<ListView>
+			<ListView id="settingList">
 				<Templates>
 					<ItemTemplate name="normalsetting" height=Ti.UI.SIZE>
 						<View class="back">

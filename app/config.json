@@ -29,7 +29,7 @@
       "USERKEY":"373740",
       "BINDPHONE":"373741",
       "CHANGEPASSWORD":"373742",
-      "ABOUTAPP":"373743",
+      "ABOUTAPP":"373743"
     },
     "PLKEYS":{
       "LOADPIC":"isLoadPic",
@@ -40,7 +40,6 @@
       "DEVICETOKEN":"deviceToken",
       "GETUICID":"getuiCID",
       "APPCHECKED":"appChecked"
-
     }
   },
   "env:development": {},

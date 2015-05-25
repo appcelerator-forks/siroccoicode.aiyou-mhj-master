@@ -33,8 +33,6 @@ $.tabGroup.init({
   tabClickCallback : tabClickCallback
 });
 $.tabGroup.setIndex(0);
-$.center.add(views[2]);
-$.center.add(views[1]);
 $.center.add(views[0]);
 
 function tabClickCallback(_index) {
