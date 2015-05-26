@@ -1,5 +1,5 @@
 ".container":{
-
+ layout: "vertical"
 },
 "#navibar":{
 	
@@ -12,12 +12,22 @@
 
 },
 "#phonenumber":{
-	
+	hintColor:Alloy.CFG.COLORS.DarkBeown,
+	hintText:"请输入手机号码",
 },
 "#code":{
-	
+	hintColor:Alloy.CFG.COLORS.DarkBeown,
+	hintText:"请输入手机号码",
 },
 "#countdown":{
-	
+	backgroundColor: "#0f0e0e",
+	title:"发送验证码",
+},
+"#bind":{
+	font:{
+		fontSize: "13sp",
+	},
+	height: "25dp",
+	backgroundImage:"/imgres/buttonback.png",
 }
 

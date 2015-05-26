@@ -13,7 +13,7 @@
 	width: Ti.UI.SIZE,
 	height: "20dp",
 	font:{
-		fontSize: 
+		fontSize:"10sp",
 	},
 	color:Alloy.CFG.COLORS.AiyouRed
 }
