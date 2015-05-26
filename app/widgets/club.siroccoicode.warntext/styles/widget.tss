@@ -1,0 +1,19 @@
+"#warnback":{
+	layout: "horizontal",
+	width:Ti.UI.SIZE,
+	height:Ti.UI.SIZE,
+},
+"#warnicon":{
+	width:"15dp",
+	height:"15dp",
+	image:WPATH('/warn.png')
+},
+"#warntext":{
+	left:"3dp",
+	width: Ti.UI.SIZE,
+	height: "20dp",
+	font:{
+		fontSize: 
+	},
+	color:Alloy.CFG.COLORS.AiyouRed
+}

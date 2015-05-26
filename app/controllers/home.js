@@ -9,7 +9,8 @@
 			Ti.App.Properties.setString(Alloy.CFG.kAPIVERSION,"v1");
 			http.HttpPOST('login',Alloy.Globals.translateForGET({pwd:"6915158x",flag:"18667048968"}),{},success,error,true);
 			var scrollAbleView=Ti.UI.createScrollableView({
-				views:[multiContentView,gonglue,novelsView]
+				views:[multiContentView,gonglue,novelsView],
+				cacheSize:10
 			});
 			//$.scroll.views       =[multiContentView,gonglue,novelsView];
 			$.homeback.add(scrollAbleView);

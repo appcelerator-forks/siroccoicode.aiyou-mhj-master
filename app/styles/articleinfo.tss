@@ -4,7 +4,7 @@
 },
 //================================头部样式===========================================
 "#headerBack":{
-	height: "195dp",
+	height: Ti.UI.SIZE,
 	layout:"vertical",
 	backgroundColor: "#234523"
 },
@@ -28,7 +28,6 @@
  color: Alloy.CFG.COLORS.DarkGray
 	},
 "#articlecontent":{
-height: "0dp"
 	},
 "#commentText":{
 	text:"评论",

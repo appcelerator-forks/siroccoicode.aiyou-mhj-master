@@ -22,9 +22,8 @@
 						<Label id="dcLabel"/>
 					</View>
 				</ItemTemplate>
-			</Templates>
-			<HeaderView >
-				<View id="headerBack">
+				<ItemTemplate name="web">
+					<View id="headerBack">
 					<View id="titleback">
 						<Label id="articletitle" bindId="articletitle"/>
 						<View id="headerbottomline">
@@ -33,10 +32,11 @@
 							<Label id="posttime" bindId="posttime" class="bottomlabel"/>
 						</View>
 					</View>
-					<WebView id="articlecontent"/>
+					<WebView id="articlecontent" bindId="articlecontent" onLoad='loadHtml' onTouchmove="block"/>
 					<Label id="commentText"/>
 				</View>
-			</HeaderView>
+				</ItemTemplate>
+			</Templates>
 				<FooterView>
 				<View id="inputbar">
 					<View id="inputArea">
@@ -47,7 +47,7 @@
 				</View>
 			</FooterView>
 			<ListSection>
-				<ListItem title="test" temaplate=Titanium.UI.LIST_ITEM_TEMPLATE_DEFAULT/>
+				<ListItem title="test" template="web"/>
 			</ListSection>
 		</ListView>
 		</View>		

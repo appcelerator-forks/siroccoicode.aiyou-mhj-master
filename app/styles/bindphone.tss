@@ -1,4 +1,23 @@
+".container":{
 
-".container" : {
-  
+},
+"#navibar":{
+	
+},
+".inputTextfield":{
+	height: "65dp",
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
+	left: "15dp",
+	right: "15dp"
+
+},
+"#phonenumber":{
+	
+},
+"#code":{
+	
+},
+"#countdown":{
+	
 }
+

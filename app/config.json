@@ -1,67 +1,69 @@
 {
-  "global": {
-    "GroupID": "140589",
-    "APPINFO": "http://openapi.aiyou.com/app/api/info",
-    "kAPIHOST": "apihost",
-    "kAPIVERSION": "apiversion",
-    "kCHECKLOGIN": "islogin",
-    "kUSERTOKEN": "usertoken",
-    "kUSERID": "userid",
-    "ZHTL": "269",
-    "GLXD": "80",
-    "XSYD": "273",
-    "LIMITS": "20",
-    "COLORS": {
-      "LightBrown": "#aea399",
-      "DarkBrown": "#605c5c",
-      "LightYellow": "#fff298",
-      "LightBlack": "#363434",
-      "DarkBlack": "#312f2f",
-      "DeepBlack": "#1c1919",
-      "AiyouRed":"#e74c3c",
-      "LightGray":"#b5a99f",
-      "DarkGray":"#605c5c"
+    "global": {
+        "GroupID": "140589",
+        "APPINFO": "http://openapi.aiyou.com/app/api/info",
+        "kAPIHOST": "apihost",
+        "kAPIVERSION": "apiversion",
+        "kCHECKLOGIN": "islogin",
+        "kUSERTOKEN": "usertoken",
+        "kUSERID": "userid",
+        "ZHTL": "269",
+        "GLXD": "80",
+        "XSYD": "273",
+        "LIMITS": "20",
+        "COLORS": {
+            "LightBrown": "#aea399",
+            "DarkBrown": "#605c5c",
+            "LightYellow": "#fff298",
+            "LightBlack": "#363434",
+            "DarkBlack": "#312f2f",
+            "DeepBlack": "#1c1919",
+            "AiyouRed": "#e74c3c",
+            "LightGray": "#b5a99f",
+            "DarkGray": "#605c5c"
+        },
+        "EVENTKEYS": {
+            "COLLECTKEY": "373737",
+            "PACKKEY": "373738",
+            "SETTINGKEY": "373739",
+            "USERKEY": "373740",
+            "BINDPHONE": "373741",
+            "CHANGEPASSWORD": "373742",
+            "ABOUTAPP": "373743"
+        },
+        "PLKEYS": {
+            "LOADPIC": "isLoadPic",
+            "PRESENTUSER": "presentUser",
+            "RECENTUSER": "recentUser",
+            "USERINFO": "userInfo",
+            "EXTUSERINFO": "extUserInfo",
+            "DEVICETOKEN": "deviceToken",
+            "GETUICID": "getuiCID",
+            "APPCHECKED": "appChecked"
+        }
     },
-    "EVENTKEYS":{
-      "COLLECTKEY":"373737",
-      "PACKKEY":"373738",
-      "SETTINGKEY":"373739",
-      "USERKEY":"373740",
-      "BINDPHONE":"373741",
-      "CHANGEPASSWORD":"373742",
-      "ABOUTAPP":"373743"
+    "env:development": {},
+    "env:test": {},
+    "env:production": {},
+    "os:android": {
+        "APP_KEY": "cdc8f1c9acd89e3e4a37d77ad053528c"
     },
-    "PLKEYS":{
-      "LOADPIC":"isLoadPic",
-      "PRESENTUSER":"presentUser",
-      "RECENTUSER":"recentUser",
-      "USERINFO":"userInfo",
-      "EXTUSERINFO":"extUserInfo",
-      "DEVICETOKEN":"deviceToken",
-      "GETUICID":"getuiCID",
-      "APPCHECKED":"appChecked"
+    "os:ios": {
+        "APP_KEY": "9bf15bdb34b5d20ae8cbf3e8d514b9c2"
+    },
+    "os:mobileweb": {},
+    "os:windows": {},
+    "dependencies": {
+        "me.wslong.tiTabs": "2.0",
+        "club.siroccoicode.navbar": "1.0",
+        "club.siroccoicode.segement": "1.0",
+        "menu": "1.0",
+        "club.siroccoicode.popmenu": "1.0",
+        "nl.fokkezb.infiniteScroll": "1.4.4",
+        "net.beyondlink.toast": "1.0",
+        "com.jolicode.pullToRefresh": "1.2",
+        "nl.fokkezb.pullToRefresh": "2.1.0",
+        "club.siroccoicode.warntext": "1.0",
+        "com.harkdev.stylehinttextfield":"1.0"
     }
-  },
-  "env:development": {},
-  "env:test": {},
-  "env:production": {},
-  "os:android": {
-    "APP_KEY": "cdc8f1c9acd89e3e4a37d77ad053528c"
-  },
-  "os:ios": {
-    "APP_KEY": "9bf15bdb34b5d20ae8cbf3e8d514b9c2"
-  },
-  "os:mobileweb": {},
-  "os:windows": {},
-  "dependencies": {
-    "me.wslong.tiTabs": "2.0",
-    "club.siroccoicode.navbar": "1.0",
-    "club.siroccoicode.segement": "1.0",
-    "menu": "1.0",
-    "club.siroccoicode.popmenu": "1.0",
-    "nl.fokkezb.infiniteScroll": "1.4.4",
-    "net.beyondlink.toast": "1.0",
-    "com.jolicode.pullToRefresh": "1.2",
-    "nl.fokkezb.pullToRefresh": "2.1.0"
-  }
 }

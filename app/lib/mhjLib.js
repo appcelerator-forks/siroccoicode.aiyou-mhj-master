@@ -5,12 +5,14 @@ exports.switchView=function(parent,views,index,preIndex){
 	if(index>views.length) return;
 	if(index !== preIndex)
 	{
-		
-		if(parent.children.indexOf(views[preIndex])!= -1){
-			parent.remove(views[preIndex]);
-
-		}
-		parent.add(views[index]);
+		_.each(views,function(element,listindex,list){
+			if (listindex==index) {
+				element.show();
+			}else{
+				element.hide();
+			}
+			
+		});
 		
 	}
 	

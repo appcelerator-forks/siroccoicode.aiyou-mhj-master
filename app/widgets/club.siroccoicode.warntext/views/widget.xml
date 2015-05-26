@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="warnback">
+		<ImageView id="warnicon" />
+		<Label id="warntext" />
+	</View>>
+</Alloy>
