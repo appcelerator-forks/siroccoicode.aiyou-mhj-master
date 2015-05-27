@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="navbarback">
+		<ImageView id="backimage" />
+		<Label id="titlelabel"/>
+	</View>
+</Alloy>

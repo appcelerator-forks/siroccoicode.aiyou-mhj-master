@@ -1,8 +1,6 @@
 <Alloy>
 	<Window id="window" navBarHidden=true>
-		<View class="container">
-			<View id="navibar">
-			</View>
+			<Require src="basicnavbar" id="navbar"/>
 			<Widget src="club.siroccoicode.warntext" id="warn" />
 			<View class="inputTextfield">
 				<Widget src="com.harkdev.stylehinttextfield" id="phonenumber"/>
@@ -14,6 +12,5 @@
 				<Widget src="com.harkdev.stylehinttextfield" id="code"/>
 			</View>
 			<Button id="bind"/>
-		</View>
 	</Window>
 </Alloy>

@@ -1,4 +1,38 @@
+"#window":{
+ layout: "vertical",
+},
+".inputTextfield":{
+	top:"1dp",
+	height: Ti.UI.SIZE,
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
+	left: "15dp",
+	right: "15dp",
+},
+"#oldpwd":{
+	hintColor:Alloy.CFG.COLORS.LightBrown,
+	hintText:"请输入旧密码",
+	backgroundColor: Alloy.CFG.COLORS.DarkBrown
+},
+"#newpwd":{
+	hintColor:Alloy.CFG.COLORS.LightBrown,
+	hintText:"请输入新密码",
+	backgroundColor: Alloy.CFG.COLORS.DarkBrown
+},
+"#confirmpwd":{
+	hintColor:Alloy.CFG.COLORS.LightBrown,
+	hintText:"请再输一次确认密码",
+	backgroundColor: Alloy.CFG.COLORS.DarkBrown
+},
+"#changepwd":{
+	font:{
+		fontSize: "13sp",
+	},
+	top: "10dp",
+	height: "45dp",
+	backgroundImage:"/imgres/buttonback.png",
+	left: "25dp",
+	right:"25dp",
+	title: "修改密码",
+	color:Alloy.CFG.COLORS.LightBrown
 
-".container" : {
-  
 }

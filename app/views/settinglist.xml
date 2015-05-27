@@ -1,8 +1,7 @@
 <Alloy>
 	<Window id="window" navBarHidden=true>
 		<View class="container">
-			<View id="navBar">
-			</View>
+			<Require src="basicnavbar" id="navbar"/>
 			<ListView id="settingList">
 				<Templates>
 					<ItemTemplate name="normalsetting" height=Ti.UI.SIZE>
@@ -43,6 +42,7 @@
 				</ListSection>
 
 			</ListView>
+			<Button id="logout" />
 		</View>
 	</Window>
 </Alloy>

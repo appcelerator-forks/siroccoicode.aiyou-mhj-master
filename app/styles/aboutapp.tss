@@ -1,0 +1,14 @@
+"#window":{
+	layout: "vertical",
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack
+},
+"#aboutapp":{
+	font:{
+		fontSize: "14sp",
+	},
+	color:Alloy.CFG.COLORS.DarkBrown,
+	text:"  蛮荒记是乐港科技爱游平台开发的一款针对蛮荒记页游的游戏助手,主要包括游戏攻略查看、蛮荒记小说阅读以及蛮荒记礼包领取等功能，非常感谢所有蛮荒记用户对蛮荒记助手的支持,我们会努力开发出更多的功能.",
+	left: "20dp",
+	right:"20dp",
+	top:"20dp"
+},

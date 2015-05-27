@@ -22,7 +22,7 @@
 	width: "10dp",
 	height: "20dp",
 	right: "15dp",
-	image:"/imgres/defaultuser.png"
+	image:"/imgres/detailindicator.png"
 },
 "#imageswitch":{
 	height: "36dp",
@@ -40,4 +40,19 @@
 },
 "#aboutApp":{
 	eventKey:Alloy.CFG.EVENTKEYS.ABOUTAPP
+},
+"#settingList":{
+	height: Ti.UI.SIZE
+},
+"#logout":{
+	font:{
+		fontSize: "13sp",
+	},
+	top: "10dp",
+	height: "45dp",
+	backgroundImage:"/imgres/buttonback.png",
+	left: "25dp",
+	right:"25dp",
+	title: "退出",
+	color:Alloy.CFG.COLORS.LightBrown
 }

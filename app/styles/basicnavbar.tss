@@ -1,0 +1,16 @@
+"#navbarback":{
+	backgroundImage:"/imgres/navBarBack.png",
+	height:"60dp",
+	left: "0dp",
+	right:"0dp"
+},
+"#backimage":{
+	left: "20dp",
+	image:"/imgres/navBack.png",
+	height:"25dp",
+	width: "25dp"
+},
+"#titlelabel":{
+	width:Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+}

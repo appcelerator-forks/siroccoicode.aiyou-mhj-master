@@ -28,6 +28,7 @@ if(OS_ANDROID) {
 }
 
 Alloy.Globals.dpToPx = function(dp) {
+  Ti.API.info("px is",dp * (Ti.Platform.displayCaps.platformHeight / Alloy.Globals.Device.height));
   return dp * (Ti.Platform.displayCaps.platformHeight / Alloy.Globals.Device.height);
 };
 

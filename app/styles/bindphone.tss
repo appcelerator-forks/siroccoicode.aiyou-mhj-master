@@ -1,33 +1,44 @@
-".container":{
- layout: "vertical"
-},
-"#navibar":{
-	
+"#window":{
+ layout: "vertical",
 },
 ".inputTextfield":{
-	height: "65dp",
+	top:"1dp",
+	height: Ti.UI.SIZE,
 	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
 	left: "15dp",
 	right: "15dp"
 
 },
 "#phonenumber":{
-	hintColor:Alloy.CFG.COLORS.DarkBeown,
+	hintColor:Alloy.CFG.COLORS.LightBrown,
 	hintText:"请输入手机号码",
+	backgroundColor: Alloy.CFG.COLORS.DarkBrown
 },
 "#code":{
-	hintColor:Alloy.CFG.COLORS.DarkBeown,
-	hintText:"请输入手机号码",
+	hintColor:Alloy.CFG.COLORS.LightBrown,
+	hintText:"请输入验证码",
+	backgroundColor: Alloy.CFG.COLORS.DarkBrown
 },
 "#countdown":{
 	backgroundColor: "#0f0e0e",
-	title:"发送验证码",
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	right:"0dp",
+},
+"#countbutton":{
+	title:"发送验证码"
 },
 "#bind":{
 	font:{
 		fontSize: "13sp",
 	},
-	height: "25dp",
+	top:"10dp",
+	height: "45dp",
 	backgroundImage:"/imgres/buttonback.png",
+	left: "25dp",
+	right:"25dp",
+	title: "绑定手机",
+	color:Alloy.CFG.COLORS.LightBrown
+
 }
 
