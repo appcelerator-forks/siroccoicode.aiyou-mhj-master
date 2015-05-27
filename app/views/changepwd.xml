@@ -1,0 +1,16 @@
+<Alloy>
+	<Window id="window" navBarHidden=true>
+			<Require src="basicnavbar" id="navbar"/>
+			<Widget src="club.siroccoicode.warntext" id="warn" />
+			<View class="inputTextfield">
+				<Widget src="com.harkdev.stylehinttextfield" id="oldpwd"/>
+			</View>
+			<View class="inputTextfield">
+				<Widget src="com.harkdev.stylehinttextfield" id="newpwd"/>
+			</View>
+			<View class="inputTextfield">
+				<Widget src="com.harkdev.stylehinttextfield" id="confirmpwd"/>
+			</View>
+			<Button id="changepwd"/>
+	</Window>
+</Alloy>
