@@ -1,6 +1,7 @@
 
 "#back" : {
-  layout: "vertical"
+  layout: "vertical",
+  bottom:"60dp"
 },
 //================================头部样式===========================================
 "#headerBack":{
@@ -41,60 +42,81 @@
 
 
 //===============================主评论样式========================================
-// "#":{
+"#mcback":{
+	height:Ti.UI.SIZE,
+	backgroundColor: Alloy.CFG.COLORS.LightBlack,
+	layout:"horizontal"
+},
+"#usericon":{
+	height:"45dp",
+	width:"45dp",
+	defaultImage: "/imgres/defaultuser.png"
+},
+"#rightBack":{
+	layout:"vertical",
 
-// },
+},
+"#mcFirstLine":{
+	layout:"horizontal",
+	height:Ti.UI.SIZE,
+},
+"#userName"	:{
+	color:Alloy.CFG.COLORS.DarkBlack,
+	font: {
+		fontSize: "12sp"
+	},
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+},
+"#replytime":{
+	color:Alloy.CFG.COLORS.DarkBlack,
+	font:{
+		fontSize: "12sp"
+	},
+},
+"#mcLabel":{
+	color:Alloy.CFG.COLORS.DarkBrown,
+	font:{
+		fontSize:"13sp"
+	},
+},
 
 //===============================子评论样式==========================================
+// use attributedString so replace any font and color setting
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+"#dcLabel":{
+	height:Ti.UI.SIZE,
+},
+"#dcback":{
+	height:Ti.UI.SIZE,	
+},
 
 
 
 //=================================输入框样式========================================
 "#postcomment":{
-	title:"fabiao"
+	title:"发表",
+	right:"5dp",
+	width:"50dp",
 },
 "#inputbar":{
-	height: "20dp",
-	top:"0dp"
+	height: "60dp",
+	bottom:"0dp",
+	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
+},
+"#inputArea":{
+	right:"60dp",
+	left:"10dp",
+},	
+"#comment":{
+	height: "20dp"
 }
+//============================下拉样式==========================================
+"#detaildropdownback":{
+	height:"30dp"
+},
+"#detailDropdownIcon":{
+	image:"/imgres/dropdown.png",
+	height:"15dp",
+	width:"25dp",
+	top:"3dp",	
+},

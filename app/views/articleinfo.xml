@@ -5,7 +5,7 @@
 
 		<ListView id="article">
 			<Templates>
-				<ItemTemplate name="mastercomment">
+				<ItemTemplate name="mastercomment" height=Ti.UI.SIZE>
 					<View id="mcback">
 						<ImageView id="usericon" bindId="usericon"/>
 						<View id="rightBack">
@@ -13,13 +13,13 @@
 								<Label id="userName" bindId="userName"/>
 								<Label id="replytime" bindId="replytime"/>
 							</View>
-							<Label id="mcLabel"/>
+							<Label id="mcLabel" bindId="mcLabel"/>
 						</View>
 					</View>
 				</ItemTemplate>
-				<ItemTemplate name="detailcomment">
+				<ItemTemplate name="detailcomment" height=Ti.UI.SIZE>
 					<View id="dcback">
-						<Label id="dcLabel"/>
+						<Label id="dcLabel" bindId="dcLabel"/>
 					</View>
 				</ItemTemplate>
 				<ItemTemplate name="web">
@@ -36,20 +36,24 @@
 					<Label id="commentText"/>
 				</View>
 				</ItemTemplate>
-			</Templates>
-				<FooterView>
-				<View id="inputbar">
-					<View id="inputArea">
-						<TextArea id="comment"/>
-						<Label id="inputHint"/>
+				<ItemTemplate name="detailDropdown" height=Ti.UI.SIZE>
+					<View id="detaildropdownback">
+						<ImageView id="detailDropdownIcon"/>
 					</View>
-					<Button id="postcomment"/>
-				</View>
-			</FooterView>
+				</ItemTemplate>
+			</Templates>
+				
 			<ListSection>
 				<ListItem title="test" template="web"/>
 			</ListSection>
 		</ListView>
-		</View>		
+		</View>	
+		<View id="inputbar">
+			<View id="inputArea">
+				<TextArea id="comment"/>
+				<Label id="inputHint"/>
+			</View>
+		<Button id="postcomment"/>
+		</View>			
 	</Window>
 </Alloy>
