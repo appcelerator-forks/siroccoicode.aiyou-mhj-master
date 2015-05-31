@@ -1,4 +1,19 @@
 
-".container" : {
-  
+"#window" : {
+	layout: "vertical",
+	backgroundImage: "/imgres/regback.png"  
+},
+"#phonenumer":{
+	hintText: "手机号",
+},
+"#nickname":{
+	hintText: "昵称",
+},
+"#password":{
+	hintText: "密码",
+},
+"#regbutton":{
+	backgroundImage: "/imgres/regbutton.png",
+	width:"100dp",
+	height:"40dp",
 }

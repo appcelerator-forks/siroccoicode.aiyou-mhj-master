@@ -1,4 +1,36 @@
+"#window":{
+	backgroundImage:"/imgres/loginback.jpg",
+	layout:"vertical",
+},
 
-".container" : {
-  
-}
+"#usericon" : {
+	top:"2dp",
+	left: "2dp",
+	right:"2dp",
+	bottom: "2dp",
+  	width:"160px",
+  	height:"160px",
+  	borderRadius: "8px"
+},
+"#iconborder":{
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	backgroundImage: "/imgres/iconborder.png"
+
+},
+"#username":{
+	hintText:"爱游账户登录",
+	hintColor:Alloy.CFG.COLORS.DarkGray,
+
+},
+"#password":{
+	hintText: "密码",
+	hintColor:Alloy.CFG.COLORS.DarkGray,
+	passwordMask: true,
+},
+".optionlabel":{
+	color:Alloy.CFG.COLORS.DarkGray,
+	font: {
+		fontSize: "16sp"
+	}
+},

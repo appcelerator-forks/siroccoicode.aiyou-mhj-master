@@ -40,7 +40,9 @@
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest>
-            <application android:theme="@style/Theme.NoActionBar"/>
+            <application android:theme="@style/Theme.NoActionBar">
+                <uses-library android:required="false" android:name="com.google.android.maps"/>
+            </application>
         </manifest>
     </android>
     <mobileweb>
@@ -52,7 +54,10 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
+    <module platform="android" version="1.2.0">de.marcelpociot.collectionview</module>
+    <module platform="iphone"  version="1.4.0">de.marcelpociot.collectionview</module>
     <module platform="android">com.rkam.swiperefreshlayout</module>
+    
   </modules>
     <deployment-targets>
         <target device="android">true</target>

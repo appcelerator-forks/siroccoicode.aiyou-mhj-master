@@ -1,4 +1,11 @@
 <Alloy>
-	<View class="container">
-	</View>
+	<Window id="window" navBarHidden=true>
+		<Require src="basicnavbar" id="navbar"/>
+		<Widget src="club.siroccoicode.warntext" id="warn" />
+		<View id="codeline">
+			<Widget src="com.harkdev.stylehinttextfield" id="code"/>
+			<Button id="countdown"/>
+		</View>
+		<Button id="regbutton"/>
+	</Window>
 </Alloy>

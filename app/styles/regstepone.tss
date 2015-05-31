@@ -1,4 +1,23 @@
 
-".container" : {
-  
+"#window" : {
+  layout:"vertical",
+  backgroundImage: "/imgres/regback.png" 
+},
+"#codeline":{
+	left:"15dp",
+	right:"15dp",
+	height:Ti.UI.SIZE,
+},
+"#countdown":{
+	right:"0dp",
+	title:"获取验证码",
+	color:Alloy.CFG.COLORS.DarkBrown
+},
+"#regbutton":{
+	backgroundImage: "/imgres/regbutton.png",
+	width:"100dp",
+	height:"40dp",
 }
+"#code":{
+		hintText: "请输入验证码"
+	},

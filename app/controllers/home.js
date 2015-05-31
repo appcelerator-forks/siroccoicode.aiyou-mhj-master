@@ -15,7 +15,7 @@
 			//$.scroll.views       =[multiContentView,gonglue,novelsView];
 			$.homeback.add(scrollAbleView);
 			$.navbar.getView('btnMenu').addEventListener("click",function(e){
-			var articleinfo=Alloy.createController("articleinfo");
+			var articleinfo=Alloy.createController("postarticle");
 			Alloy.Globals.Navigator.push(articleinfo);
 			
 			});
