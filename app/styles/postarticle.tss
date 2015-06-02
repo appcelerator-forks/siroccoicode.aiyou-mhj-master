@@ -1,4 +1,23 @@
+"#window":{
+	layout:"vertical",
+},
+".inputTextfield":{
+	height:Ti.UI.SIZE,
+ 	layout:"horizontal"
+},
+".leftview":{
+	font:{
+		fontSize: "13sp",
+	},
+	color:Alloy.CFG.COLORS.DarkBrown
+},
+"#imageWall":{
+	height:"70dp",
+},
 
-".container" : {
-  
+"#articlecontent":{
+	height:"120dp",
+},
+"#articletitle":{
+	hintText:"标题不能被吃掉哦",
 }

@@ -3,14 +3,16 @@
 			<Require src="basicnavbar" id="navbar"/>
 			<Widget src="club.siroccoicode.warntext" id="warn" />
 			<View class="inputTextfield">
-				<Widget src="com.harkdev.stylehinttextfield" id="phonenumber"/>
-				<View id="countdown">
-					<Button id="countbutton"/>
-				</View>
+				<Label class="leftview" text="分类"/>
+				<Button id="topic"/>
 			</View>
 			<View class="inputTextfield">
-				<Widget src="com.harkdev.stylehinttextfield" id="code"/>
+				<Label text="标题" class="leftview"/>
+				<Widget src="com.harkdev.stylehinttextfield" id="articletitle"/>
 			</View>
-			<Button id="bind"/>
+			<TextArea id="articlecontent" />
+			<View id="imageWall">
+			</View>
+			<Button title="test" onClick="increase"/>
 	</Window>
 </Alloy>
