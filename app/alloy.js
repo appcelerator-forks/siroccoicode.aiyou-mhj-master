@@ -84,7 +84,29 @@ Alloy.Globals.stamptotime=function(timestamp,type){
     var date=new Date(parseInt(timestamp) * 1000);
     return date.getFullYear()+"年"+date.getMonth()+"月"+date.getDay()+"日"+date.getHours()+":"+date.getMinutes();
 };
+Alloy.Globals.encodeContentWithURL=function(){
 
+};
+Alloy.Globals.blobToByte=function(blob){
+  var blobStream = Ti.Stream.createStream({
+    source:blob,
+    mode:Ti.Stream.MODE_READ
+  });
+  var newBuffer = Ti.createBuffer({ length: blob.length });
+  blobStream.read(newBuffer);
+  newBuffer.setType(Ti.Codec.CHARSET_UTF8);
+  Ti.API.info("newbuffer",blob.data);
+};
+Alloy.Globals.arrayToDict=function(array,key){
+  var dict={};
+  _.each(array,function(element,index,list){
+    dict[key+"["+index+"]"] = element;
+  });
+  return dict;
+}
+Alloy.Globals.genBoundary=function(){
+  return Math.random().toString(36).substring(2);
+};
 Alloy.Globals.translateContentHtml=function(contentdict){
   var htmlContent="";
   var htmlString={

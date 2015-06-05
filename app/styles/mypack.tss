@@ -1,0 +1,51 @@
+
+"#masterback":{
+	layout: "vertical"
+},
+"#toparea":{
+	layout:"horizontal"
+},
+".packicon":{
+	top:"10dp",left: "10dp",
+	width:"40dp",height:"40dp",
+
+},
+".packtextarea":{
+	layout:"vertical",
+},
+".packname":{
+	font:{
+		fontSize: "14sp"
+	},
+	color:"white",
+},
+".line":{
+	layout: "horizontal",
+	height:Ti.UI.SIZE,
+},
+".predesc":{
+	height: Ti.UI.SIZE,
+	color:Alloy.CFG.COLORS.DarkGray,
+	font:{
+		fontSize: "12sp"
+	}
+},
+".detailabel":{
+	height:Ti.UI.SIZE,,
+	color: "white",
+	font: {
+		fontSize: "12sp"
+	}
+},
+".bottomarea":{
+	height:Ti.UI.SIZE,
+},
+".indicator":{
+	right:"10dp",
+	width: "15dp",
+	height: "25dp"
+},
+".copytoclip":{
+	title: "复制激活码",
+	color:"white",
+}

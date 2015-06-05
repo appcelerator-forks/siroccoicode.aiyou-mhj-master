@@ -1,0 +1,65 @@
+<Alloy>
+	<View id="packback">
+			<Widget src="nl.fokkezb.pullToRefresh" id="ptr" onRelease="myrefresh" cusvalue="0">
+				<ListView id="packlist">
+					<Templates>
+						<ItemTemplate name="packmaster" height=Ti.UI.SIZE>
+							<View id="masterback">
+								<View id="toparea">
+									<ImageView class="packicon" bindId="icon"/>
+									<View class="packtextarea">
+										<Label class="packname" bindId="title"/>
+										<View class="line">
+											<Label class="predesc" text="激活号码"/>
+											<Label id="mpackcode" bindId="packcode" class="detailabel"/>
+										</View>
+										<View class="line">
+											<Label class="predesc" text="有效期至"/>
+											<Label id="mexpiredate" bindId="expiredate" class="detailabel"/>
+										</View>
+									</View>
+								</View>
+								<View class="bottomarea">
+									<Button class="copytoclip"/>
+									<ImageView id="masterindicator" bindId="masterindicator" class="indicator" onClick="dropdown"/>
+								</View>
+							</View>
+						</ItemTemplate>
+						<ItemTemplate name="packdetail" height=Ti.UI.SIZE>
+							<View id="detailback">
+								<View id="toparea">
+									<ImageView class="packicon" bindId="icon"/>
+									<View class="packtextarea">
+										<Label class="packname" bindId="title"/>
+										<View class="line">
+											<Label class="predesc" text="激活号码"/>
+											<Label id="dpackcode" bindId="packcode" class="detailabel"/>
+										</View>
+										<View class="line">
+											<Label class="predesc" text="有效期至"/>
+											<Label id="dexpiredate" bindId="expiredate" class="detailabel"/>
+										</View>
+									</View>
+								</View>
+								<View class="line">
+										<Label class="predesc" text="礼包物品"/>
+										<Label id="packdetail" bindId="packgoods" class="detailabel"/>
+								</View>
+								<View class="line">
+										<Label class="predesc" text="使用方法"/>
+										<Label id="packdetail" bindId="usemethods" class="detailabel"/>
+								</View>
+								<View class="bottomarea">
+									<Button class="copytoclip"/>
+									<ImageView id="detailindicator" bindId="detailindicator" class="indicator" onClick="dropdown"/>
+								</View>
+							</View>
+						</ItemTemplate>
+					</Templates>
+					<ListSection id="packlistsection">
+					</ListSection>
+					<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="loadMore" />
+				</ListView>
+			</Widget>
+	      </View>
+</Alloy>

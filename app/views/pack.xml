@@ -1,6 +1,5 @@
 <Alloy>
 	<View id="packbackground">
-		<Require type="view" id="navbar" src="navibarinpack" />
 		<View id="packback">
 			<Widget src="nl.fokkezb.pullToRefresh" id="ptr" onRelease="myrefresh" cusvalue="0">
 				<ListView id="packlist">

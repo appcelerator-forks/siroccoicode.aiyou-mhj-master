@@ -4,7 +4,7 @@ var lib=require('mhjLib');
 var views=[];
 var preIndex=0;
 var homeview=Alloy.createController('home').getView();
-var pack=Alloy.createController('pack').getView();
+var pack=Alloy.createController('packhome').getView();
 var personal=Alloy.createController('personal').getView();
 
 

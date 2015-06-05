@@ -57,6 +57,8 @@
     <module platform="android" version="1.2.0">de.marcelpociot.collectionview</module>
     <module platform="iphone"  version="1.4.0">de.marcelpociot.collectionview</module>
     <module platform="android">com.rkam.swiperefreshlayout</module>
+    <module platform="android" version="1.0.0">ti.imagefactory</module>
+    <module platform="iphone" version="1.2.0">ti.imagefactory</module>
     
   </modules>
     <deployment-targets>

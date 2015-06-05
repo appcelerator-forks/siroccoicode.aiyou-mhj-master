@@ -4,10 +4,11 @@
 			var gonglue          =Alloy.createController('gonglue').getView();
 			var toast            =Alloy.createWidget("net.beyondlink.toast");
 			var http             =require("mhjHttpMethod");
+			var mhjlib           =require("mhjLib");
 			$.back.add(toast.getView());
 			Ti.App.Properties.setString(Alloy.CFG.kAPIHOST,"http://openapi.aiyou.com");
 			Ti.App.Properties.setString(Alloy.CFG.kAPIVERSION,"v1");
-			http.HttpPOST('login',Alloy.Globals.translateForGET({pwd:"6915158x",flag:"18667048968"}),{},success,error,true);
+			http.HttpPOST('login',{pwd:"6915158x",flag:"18667048968"},success,error,false);
 			var scrollAbleView=Ti.UI.createScrollableView({
 				views:[multiContentView,gonglue,novelsView],
 				cacheSize:10
@@ -25,8 +26,12 @@
 			}
 			
 			function success(e){
-			Ti.API.info(e);
-			Ti.API.info(e.responseText);
+				var result =JSON.parse(e);
+				
+				if(result.status==200){
+					alert(result.data);
+					Ti.App.Properties.setObject(Alloy.CFG.PLKEYS.USERINFO,result.data);
+				}
 			}
 			function error(e){
 			toast.info("shishi");

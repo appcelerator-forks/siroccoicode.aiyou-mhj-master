@@ -1,6 +1,7 @@
 var args = arguments[0] || {};
+var ImageFactory = require('ti.imagefactory');
 var imageList=[];
-
+var HTTP=require("mhjHttpMethod");
 
 //初始化照片墙
 var collectionView = require("de.marcelpociot.collectionview");
@@ -45,15 +46,67 @@ listView.setSections(sections);
 $.imageWall.add(listView);
 
 function increase(e){
-    $.imageWall.setHeight("100dp");
+    //其他字段
+    var datalist=[];
+    var boundary=Alloy.Globals.genBoundary();
+    var gid = {
+        name:"gid",
+        data:Alloy.CFG.GroupID
+    };
+    var tid ={
+        name:"tid",
+        data:269
+    };
+    var title ={
+        name:"title",
+        data:"StandardsTreerequests"
+    };
+    var body={
+        name:"body",
+        data:"Standards Tree requests made through IETF
+documents will be reviewed and approved by the IESG, while requests made by
+other recognized standards organizations will be reviewed by the Designated
+Expert in accordance"
+    };
+    datalist.push(gid,tid,title,body);
+    _.each(imageList,function(element,index,list){
+        var item={
+            type:"application/octet-stream",
+            name:"images["+index+"]",
+            filename:"upload"+index+".jpg",
+            data:Alloy.Globals.blobToByte(element)
+        };
+        datalist.push(item);
+    });
+    //var data =HTTP.POSTMultiPartData(datalist,boundary);
+    var data={
+        gid:Alloy.CFG.GroupID,
+        tid:269,
+        title:"StandardsTreerequests",
+        body:"Standards Tree requests made through IETF
+documents will be reviewed and approved by the IESG, while requests made by
+other recognized standards organizations will be reviewed by the Designated
+Expert in accordance"
+    };
+    _.extend(data,Alloy.Globals.arrayToDict(imageList,'images'));
+    HTTP.HttpPOST(
+        "postArticle",data,
+    postSuccess,postSuccess,true
+    );
+}
+function postSuccess(e){
+    alert(e);
 }
 function getImageSuccess(e){
     if(e.mediaType == Ti.Media.MEDIA_TYPE_PHOTO){
-        var item=[{ thumb:{image:e.media}}];
+
+        var compressImage=ImageFactory.compress(e.media,0.35);
+        var item=[{ thumb:{image:compressImage}}];
 
         listView.sections[0].insertItemsAt(imageList.length,item);
         //Ti.API.info("items",listView.sections[0].getItems());
-         imageList.push(e.media);
+         imageList.push(compressImage);
+         Ti.API.info("imagelist",imageList);
          if (imageList.length>=10) {
             listView.sections[0].deleteItemsAt(imageList.length,1);
          }

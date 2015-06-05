@@ -1,0 +1,8 @@
+<Alloy>
+	<View id="packhomeback">
+		<Require type="view" id="navbar" src="navibarinpack" />
+		<ScrollableView id="scroll" scrollingEnabled=true>
+
+		</ScrollableView>
+	</View>
+</Alloy>

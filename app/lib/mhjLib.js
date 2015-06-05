@@ -19,13 +19,13 @@ exports.switchView=function(parent,views,index,preIndex){
 };
 
 exports.isLoadPic=function(){
-	var isLoadPic=Ti.APP.Properties.getBool(Alloy.CFG.PLKEYS.LOADPIC,true);
+	var isLoadPic=Ti.App.Properties.getBool(Alloy.CFG.PLKEYS.LOADPIC,true);
 	return isLoadPic;
 }
 
 exports.isLogin=function(){
-	var userInfo=Ti.APP.Properties.getObject(Alloy.CFG.PLKEYS.USERINFO,null);
-	Ti.API.info("userInfo",userInfo);
+	var userInfo= Ti.App.Properties.getObject(Alloy.CFG.PLKEYS.USERINFO,null);
+	Ti.API.info("loginuserInfo",userInfo);
 	if (userInfo != null) {
 		return true;
 	}else{
@@ -38,18 +38,18 @@ exports.isAppCheck=function(){
 }
 
 exports.getUserInfo=function(key){
-	var userInfo=Ti.APP.Properties.getObject(Alloy.CFG.PLKEYS.USERINFO,null);
+	var userInfo=Ti.App.Properties.getObject(Alloy.CFG.PLKEYS.USERINFO,null);
 	Ti.API.info("userInfo",userInfo);
 	if (userInfo != null) {
-		return userInfo.key;
+		return userInfo[key];
 	};
 }
 
 exports.getExtUserInfo=function(key){
-	var extUserInfo=Ti.APP.Properties.getObject(Alloy.CFG.PLKEYS.EXTUSERINFO,null);
+	var extUserInfo=Ti.App.Properties.getObject(Alloy.CFG.PLKEYS.EXTUSERINFO,null);
 	Ti.API.info("userInfo",extUserInfo);
 	if (extUserInfo != null) {
-		return extUserInfo.key;
+		return extUserInfo[key];
 	};
 }
 
