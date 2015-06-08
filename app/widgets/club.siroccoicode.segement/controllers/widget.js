@@ -12,7 +12,6 @@ $.setSelectedIndex=function(index){
 	
 };
 $.back.addEventListener('click',function(e){
-	Ti.API.info('触发对象1'+e.source);
 	if(typeof e.source.segpostionindex !== 'undefined'){
 		$.setSelectedIndex(e.source.segpostionindex);
 	}

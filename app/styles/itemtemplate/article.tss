@@ -1,8 +1,8 @@
 
 "#background" : {
   backgroundColor:Alloy.CFG.COLORS.DarkBlack,
-  layout:"horizontal",
-  height:Ti.UI.SIZE
+  height:Ti.UI.SIZE,
+
 },
 "#title":{
 	top:"15dp",
@@ -12,7 +12,8 @@
 	font:{
 		fontSize:"13sp"
 	},
-	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT
+	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT,
+	height:Ti.UI.SIZE,
 },
 "#body":{
 	color:Alloy.CFG.COLORS.DarkBrown,
@@ -25,18 +26,19 @@
 	height:"33dp",
 	left:"15dp",
 	right:"15dp",
-	wordWrap:false
 },
 "#qian":{
 	backgroundColor:Alloy.CFG.COLORS.LightBlack,
-	right:"10dp",
-	left:"22dp",
+	right:"0dp",
+	left:"0dp",
+	top:"10dp",
 	layout:"vertical",
-	height:Ti.UI.SIZE
-},
+	height:Ti.UI.SIZE,
+}
 "#rightView":{
 	layout:"vertical",
-	height:Ti.UI.SIZE
+	height:Ti.UI.SIZE,left:"65dp",
+	right:"10dp"
 	
 },
 "#authorpic":{

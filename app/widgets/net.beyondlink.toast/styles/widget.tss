@@ -4,7 +4,7 @@
 	bottom: "80dp",
 	height: Ti.UI.SIZE,
   	zIndex: 999,
-  	opacity: 0
+  	opacity: 0,
 },
 "#container": {
 	height: Ti.UI.SIZE,

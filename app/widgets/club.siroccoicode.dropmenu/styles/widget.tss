@@ -1,0 +1,24 @@
+"#dropmenuback": {
+	backgroundColor: Alloy.CFG.COLORS.DeepBlack,
+	width:"90dp",
+	height:Ti.UI.SIZE,
+},
+"#basicback":{
+	backgroundColor: Alloy.CFG.COLORS.DeepBlack,
+	width:Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+},
+"#basicicon":{
+	width:"20dp",
+	height:"20dp",
+	left:"5dp",
+},
+"#basiclabel":{
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE,
+	font: {
+		fontSize: "13sp",
+	},
+	color:Alloy.CFG.COLORS.DarkBrown,
+	left:"30dp",
+}

@@ -1,21 +1,21 @@
 <Alloy>
 	<ItemTemplate name="articlepic" height=Ti.UI.SIZE>
 		<View id="background">
-			<ImageView bindId="authorpic" id="authorpic"/>
-			<View id="rightView">
-			<View id="qian">
-				<Label bindId="title" id="title"/>
-				<View id="article">
-				<ImageView bindId="articlepic" id="articlepic"/>
-				<Label bindId="body" id="body"/>
+				<ImageView bindId="authorpic" id="authorpic"/>
+				<View id="rightView">
+					<View id="qian">
+						<Label bindId="title" id="title"/>
+						<View id="articlesback">
+							<ImageView bindId="articlepic" id="articlespic"/>
+							<Label bindId="body" id="body"/>
+						</View>
+					</View>
+					<View id="bottomline">
+						<Label bindId="nickname" id="nickname"/>
+						<Label bindId="created" id="created" />
+						<ImageView id="menu"/>
+					</View>
 				</View>
-			</View>
-			<View id="bottomline">
-			<Label bindId="nickname" id="nickname"/>
-			<Label bindId="created" id="created" />
-			<ImageView id="menu"/>
-			</View>
-		</View>
 		</View>
 	</ItemTemplate>
 </Alloy>

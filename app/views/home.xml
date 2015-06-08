@@ -1,8 +1,9 @@
 <Alloy>
 <View id="back">
 	<View id="homeback">
-		<Require type="view" src="navigationbar" id="navbar" />	
+		<Require type="view" src="navbarhome" id="navbar" />	
 		
 	</View>
+	<Widget src="club.siroccoicode.dropmenu" id="dropmenu"/>
 </View>
 </Alloy>

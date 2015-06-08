@@ -1,0 +1,7 @@
+<Alloy>
+	<View class="container">
+		<ImageView id='applogo'/>
+		<Widget id="segment" src="club.siroccoicode.segement"/>
+		<ImageView id="btnMenu"/>
+	</View>
+</Alloy>

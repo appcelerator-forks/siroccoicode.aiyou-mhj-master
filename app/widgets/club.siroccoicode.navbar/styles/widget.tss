@@ -20,16 +20,13 @@
 	height: "47dp"
 },
 "#rightView": {
-	top: "0dp",
-	right: "0dp",
-	width: Ti.UI.SIZE,
-	height: "47dp"
+
 },
 "#Wrapper": {
 	top: "0dp",
 	left: "0dp",
 	width: Ti.UI.FILL,
 	height: "47dp",
-	backgroundColor: "#fff"
+	backgroundImage: "/imgres/navBarBack.png"
 
 },

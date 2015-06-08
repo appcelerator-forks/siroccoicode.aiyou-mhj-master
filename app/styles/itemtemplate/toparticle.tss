@@ -7,15 +7,16 @@
 	height:"45dp"
 },
 "#toparticletitle":{
-	left:"18dp",
+	left:"5dp",
 	font:{
-		fontSize:"15sp"
+		fontSize:"14sp"
 	},
 	color:Alloy.CFG.COLORS.LightBrown,
-	height:"25dp"
+	height:"25dp",
 }
 "#background":{
 	height:Ti.UI.SIZE,
 	layout:"horizontal",
-	backgroundColor:Alloy.CFG.COLORS.DarkBlack
+	backgroundColor:Alloy.CFG.COLORS.DarkBlack,
+	horizontalWrap: false
 }

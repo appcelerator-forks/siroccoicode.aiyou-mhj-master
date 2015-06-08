@@ -11,22 +11,22 @@ HTTP.HttpGET("packList",{
 },myPackSuccess,myPackError,true,'refresh');
 
 $.packlist.addEventListener("itemclick",function(e){
-	switch (e.bindId){
-		case "copytoclip":{
+	// switch (e.bindId){
+	// 	case "copytoclip":{
 
-		}
-		break;
-		case "masterindicator":{
-
-		}
-		break;
-		case "detailindicator":{
-
-		}
-		break;
-		default:
-		break;
-	}
+	// 	}
+	// 	break;
+	// 	case "masterindicator":{
+	// 		alert("master有反应了");
+	// 	}
+	// 	break;
+	// 	case "detailindicator":{
+	// 		alert("detail有反应了");
+	// 	}
+	// 	break;
+	// 	default:
+	// 	break;
+	// }
 });
 
 function myPackSuccess(e,type){
@@ -47,15 +47,17 @@ function myPackSuccess(e,type){
 function myPackError(e,type){
 
 }
-function bindViewForMasterPack(datalist){
-	Ti.API.info("maypcak",datalist);
+function bindViewForMasterPack(itemlists){
+	
 	var items=[];
-	_.each(datalist,function(element,index,list){
+	_.each(itemlists,function(element,index,list){
+		Ti.API.info("mypack1",element);
 		var item=bindViewForPackItem(element);
+		Ti.API.info("mypack2",item);
 		item=bindViewForMasterPackItem(item);
 		items.push(item);
 	});
-	Ti.API.info("mypack",items);
+	
 	return items;
 }
 function bindViewForPackItem(element){
@@ -63,7 +65,7 @@ function bindViewForPackItem(element){
 			icon:{image:element.icon},
 			title:{text:element.title},
 			packcode:{text:element.sid},
-			expiredate:{text:Alloy.GLobals.stamptotime(element.expired,'/')},
+			expiredate:{text:Alloy.Globals.stamptotime(element.expired,'/')},
 			usemethods:{text:element.use_method},
 			packgoods:{text:element.description},
 			giftid:element.gift_id
@@ -78,8 +80,22 @@ function bindViewForDetailPackItem(item){
 	item.template="packdetail";
 	return item;
 }
-function dropdown(){
-
+function dropdown(e){
+	switch (e.bindId){
+		case "masterindicator":{
+			var item = e.section.getItemAt(e.itemIndex);
+			item = bindViewForDetailPackItem(item);
+			Ti.API.info("master",item);
+			$.packlistsection.updateItemAt(e.itemIndex,item);
+		}
+		break;
+		case "detailindicator":{
+			var item = e.section.getItemAt(e.itemIndex);
+			item = bindViewForMasterPackItem(item);
+			$.packlistsection.updateItemAt(e.itemIndex,item);
+		}
+		break;
+	}
 }
 
 function loadMore(){

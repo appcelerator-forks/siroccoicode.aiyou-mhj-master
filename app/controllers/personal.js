@@ -7,7 +7,7 @@ $.settinglist.addEventListener('itemclick',function(e){
 	 var item = e.section.getItemAt(e.itemIndex);
 	 Ti.API.info("点击时间",item);
 	 switch (item.properties.eventKey){
-	 	case Alloy.CFG.EVENTKEYS.COLECTKEY:
+	 	case Alloy.CFG.EVENTKEYS.COLLECTKEY:
 	 		var articleinfo=Alloy.createController("articleinfo");
 			Alloy.Globals.Navigator.push(articleinfo);
 	 		break;

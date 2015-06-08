@@ -2,7 +2,6 @@
 
 "#background" : {
   backgroundColor:Alloy.CFG.COLORS.DarkBlack,
-  layout:"horizontal",
   height:Ti.UI.SIZE
 },
 "#title":{
@@ -21,18 +20,21 @@
 		fontSize:"13sp"
 	},
 	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT,
-	left:"15dp",
+	left:"38dp",
 	height:"33dp"
 },
 "#qian":{
 	backgroundColor:Alloy.CFG.COLORS.LightBlack,
-	right:"10dp",
-	left:"22dp",
+	top:"10dp",
+	right:"0dp",
+	left:"0dp",
 	layout:"vertical",
 	height:Ti.UI.SIZE
 },
 "#rightView":{
 	layout:"vertical",
+	left:"65dp",
+	right:"10dp",
 	height:Ti.UI.SIZE
 	
 },
@@ -64,17 +66,17 @@
 	height:"30dp"
 	
 },
-"#article":{
-	layout:"horizontal",
+"#articlesback":{
 	height:Ti.UI.SIZE,
 	left:"10dp",
 	top:"15dp",
 	right:"15dp",
 	bottom:"15dp",
-}
-"#articlepic":{
+},
+"#articlespic":{
 	width:"33dp",
-	height:"33dp"
-	
+	height:"33dp",
+	top:"0dp",
+	left:"0dp"	
 }
 

@@ -3,16 +3,16 @@
 	<View id="background">
 			<ImageView bindId="authorpic" id="authorpic"/>
 			<View id="rightView">
-			<View id="qian">
-				<Label bindId="title" id="title"/>
-				<Label bindId="body" id="body"/>
+				<View id="qian">
+					<Label bindId="title" id="title"/>
+					<Label bindId="body" id="body"/>
+				</View>
+				<View id="bottomline">
+					<Label bindId="nickname" id="nickname"/>
+					<Label bindId="created" id="created" />
+					<ImageView id="menu"/>
+				</View>
 			</View>
-			<View id="bottomline">
-			<Label bindId="nickname" id="nickname"/>
-			<Label bindId="created" id="created" />
-			<ImageView id="menu"/>
-			</View>
-		</View>
-		</View>
+	</View>
 	</ItemTemplate>
 </Alloy>

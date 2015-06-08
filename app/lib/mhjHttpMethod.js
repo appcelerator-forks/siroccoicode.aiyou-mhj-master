@@ -113,5 +113,5 @@ exports.POSTMultiPartData=function(datalist,boundary){
     });
     Ti.API.info(content);
     return content;
-}
+};
 

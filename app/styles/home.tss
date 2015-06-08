@@ -2,10 +2,8 @@
 "#homeback" : {
 	layout:"vertical",
 	bottom:"60dp"
-}
-"#testlabel":{
-	top:'80dp',
-	width:"100dp",
-	height:"100dp",
-	left:"15dp"
+},
+"#dropmenu":{
+	top:"60dp",
+	right:"0dp"
 }

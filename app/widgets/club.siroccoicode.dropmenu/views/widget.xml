@@ -1,0 +1,17 @@
+<Alloy>
+	<View id="dropmenuback">
+		<ListView id="droplist">
+			<Templates>
+				<ItemTemplate name="basic" height=Ti.UI.SIZE>
+					<View id="basicback">
+						<ImageView id="basicicon" bindId="itemicon"/>
+						<Label id="basiclabel" bindId="itemlabel"/>
+					</View>
+				</ItemTemplate>
+			</Templates>
+			<ListSection id="dropsection">
+				
+			</ListSection>
+		</ListView>
+	</View>
+</Alloy>

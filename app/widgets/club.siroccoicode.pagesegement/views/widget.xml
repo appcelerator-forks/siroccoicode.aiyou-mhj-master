@@ -2,8 +2,8 @@
 	<View id="naviBarBack">
 		<View id="segment">
 			<View id="wrapper">
-				<Label id="allpack"/>
-				<Label id="mypack" />
+				<Label id="allpack" sectionIndex=0/>
+				<Label id="mypack" sectionIndex=1/>
 			</View>
 			<View id="floatindictor"/>
 		</View>

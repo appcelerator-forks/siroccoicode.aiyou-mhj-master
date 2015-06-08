@@ -23,7 +23,7 @@
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	color:"#fff298"
 },
-"#float":{
+"#floatindictor":{
   height:"3dp",
   bottom:"0dp",
   width:"50%",
@@ -32,5 +32,5 @@
 },
 "#naviBarBack":{
 	height:"60dp",
-	backgroundImage: "/imgres/navBarBack.png"
+	backgroundImage: WPATH("/navBarBack.png")
 }

@@ -15,14 +15,19 @@
 			});
 			//$.scroll.views       =[multiContentView,gonglue,novelsView];
 			$.homeback.add(scrollAbleView);
+			var itema={ template:"basic", itemicon:{image:"/imgres/zan.png"},itemlabel:{text:"发表文章"}};
+			$.dropmenu.initDropList({items:[itema],callback:loadLinkItem});
 			$.navbar.getView('btnMenu').addEventListener("click",function(e){
-			var articleinfo=Alloy.createController("postarticle");
-			Alloy.Globals.Navigator.push(articleinfo);
-			
+			if($.dropmenu.checkShown()){
+				$.dropmenu.animateOut();
+			}else{
+				$.dropmenu.animateIn();
+			}
 			});
 			
-			function loadLinkItem(){
-			Ti.API.info("ds");
+			function loadLinkItem(e){
+				var postarticle=Alloy.createController('postarticle');
+				Alloy.Globals.Navigator.push(postarticle);			
 			}
 			
 			function success(e){

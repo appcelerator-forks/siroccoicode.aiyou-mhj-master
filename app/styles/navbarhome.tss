@@ -1,13 +1,13 @@
 
-'#appLogo':{
+".container" : {
+  height:"60dp",
+  backgroundImage: "/imgres/navBarBack.png"
+},
+'#applogo':{
+	left:"10dp",
 	width:"35dp",
 	height:"35dp",
 	image:"/imgres/applogo.png"
-},
-'.container':{
-	top:"0dp",
-	width:Ti.UI.FILL,
-	height:Ti.UI.SIZE
 },
 "#btnMenu":{
 	right:"5dp",

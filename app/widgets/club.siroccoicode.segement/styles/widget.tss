@@ -7,7 +7,7 @@
 		fontSize:"16dp"
 	},
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-	color:"#000",
+	color:"#fff298",
 	width:"60dp",
 	height:"50dp"
 }
@@ -15,12 +15,9 @@
 	top:"0dp",
 	bottom:"0dp",
 	width:"60dp",
-	
-	
 	image:WPATH("/indictor.png")
 }
 "#back":{
 	width:Ti.UI.SIZE,
 	layout:"composite",
-	backgroundColor:"#fff"
 }

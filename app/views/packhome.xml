@@ -1,6 +1,6 @@
 <Alloy>
 	<View id="packhomeback">
-		<Require type="view" id="navbar" src="navibarinpack" />
+		<Widget id="navbar" src="club.siroccoicode.pagesegement" />
 		<ScrollableView id="scroll" scrollingEnabled=true>
 
 		</ScrollableView>

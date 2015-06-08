@@ -9,7 +9,9 @@ $.is.init($.multilist);
 loadTopPack();
 loadTopArticle();
 $.ptr.refresh();
-
+$.multilist.addEventListener("itemclick",function(e){
+  Ti.API.info("multie",e.section);
+});
 function loadTopArticle(){
     HTTP.HttpGET(
     'articleList',{

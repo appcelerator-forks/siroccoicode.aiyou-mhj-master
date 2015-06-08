@@ -1,10 +1,7 @@
 <Alloy>
 	<ItemTemplate name="toparticle" height=Ti.UI.SIZE>
 		<View id="background">
-			<ImageView id="logo">
-				<ImageView id="laba" />
-				<Label />
-			</ImageView>
+			<ImageView id="logo"></ImageView>
 			<Label id="toparticletitle" bindId="title" />
 		</View>
 	</ItemTemplate>
