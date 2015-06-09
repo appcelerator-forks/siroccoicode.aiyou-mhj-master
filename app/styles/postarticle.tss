@@ -20,4 +20,5 @@
 },
 "#articletitle":{
 	hintText:"标题不能被吃掉哦",
+	backgroundColor: Alloy.CFG.COLORS.LightBlack
 }

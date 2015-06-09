@@ -8,7 +8,7 @@
 				<Require src="itemtemplate/novel" />
 			</Templates>
 			<HeaderView>
-				<Require src="searchbar"/>
+				<Require src="searchbar" id="searchbar"/>
 			</HeaderView>
 			<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="loadMore" />
 		</ListView>	

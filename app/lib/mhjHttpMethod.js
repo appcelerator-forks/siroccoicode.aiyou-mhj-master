@@ -9,6 +9,7 @@ var requestUrlList={
 	login:"/user/login",
     comment:"/comment/list?",
 	postArticle:"/article/entity",
+    searchlist:"/search/list?",
 	topArticleList:"",
 	register:"",
 	appInfo:Alloy.CFG.APPINFO

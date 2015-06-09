@@ -2,8 +2,7 @@
 	<View id="searchBackground">
 		<View id="searchTextBack">
 			<View id="searchOverlay">
-				<TextField id="serachField"/>
-				<Label id="searchHintText" text='找什么攻略,搜搜看...'/>
+				<Widget src="com.harkdev.stylehinttextfield" id="search"/>
 			</View>
 		<ImageView id="searchIcon" />
 		</View>

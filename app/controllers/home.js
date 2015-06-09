@@ -2,8 +2,8 @@
 			var tabs = args.tab;
 			var atoast            =Alloy.createWidget("net.beyondlink.toast");
 			var multiContentView = Alloy.createController('multicontent',{toast:atoast,tabgroup:tabs}).getView();
-			var novelsView       = Alloy.createController('novels').getView();
-			var gonglue          =Alloy.createController('gonglue').getView();
+			var novelsView       = Alloy.createController('novels',{toast:atoast}).getView();
+			var gonglue          =Alloy.createController('gonglue',{toast:atoast}).getView();
 			var http             =require("mhjHttpMethod");
 			var mhjlib           =require("mhjLib");
 			$.back.add(atoast.getView());
