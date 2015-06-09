@@ -1,5 +1,5 @@
 var args      = arguments[0] || {};
-var articleid = '10855';
+var articleid = args.nid||'10855';
 var HTTP      = require("mhjHttpMethod");
 var lastflag ="";
 //获取文章

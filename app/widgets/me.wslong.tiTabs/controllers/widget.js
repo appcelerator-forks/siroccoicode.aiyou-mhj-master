@@ -82,9 +82,11 @@ $.setIndex = function(_index) {
   for (var i = 0; i < nodes.length; i++) {
     if (nodes[i].id !== _index && nodes[i].tabController.getTabFocus()) {
       nodes[i].tabController.trigger();
+      tabClickCallback(_index);
     };
     if (nodes[i].id === _index && !nodes[i].tabController.getTabFocus()) {
       nodes[i].tabController.trigger();
+      tabClickCallback(_index);
     };
   };
 };
@@ -92,7 +94,7 @@ $.setIndex = function(_index) {
 $.Wrapper.addEventListener("click", function(_event) {
   if ( typeof _event.source.id !== "undefined" && typeof _event.source.id == "number") {
     $.setIndex(_event.source.id);
-    tabClickCallback(_event.source.id);
+    
   }
 });
 

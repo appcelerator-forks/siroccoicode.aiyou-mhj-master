@@ -15,7 +15,8 @@
 	top:"0dp",
 	bottom:"0dp",
 	width:"60dp",
-	image:WPATH("/indictor.png")
+	image:WPATH("/indictor.png"),
+	left:"0dp"
 }
 "#back":{
 	width:Ti.UI.SIZE,

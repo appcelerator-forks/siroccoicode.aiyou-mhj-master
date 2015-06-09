@@ -3,7 +3,7 @@ var args = arguments[0] || {};
 var lib=require('mhjLib');
 var views=[];
 var preIndex=0;
-var homeview=Alloy.createController('home').getView();
+var homeview=Alloy.createController('home',{tab:$.tabGroup}).getView();
 var pack=Alloy.createController('packhome').getView();
 var personal=Alloy.createController('personal').getView();
 

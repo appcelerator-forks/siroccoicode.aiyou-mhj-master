@@ -1,7 +1,10 @@
 var args = arguments[0] || {};
+
 var HTTP=require("mhjHttpMethod");
 Ti.App.Properties.setString(Alloy.CFG.kAPIHOST,"http://openapi.aiyou.com");
 Ti.App.Properties.setString(Alloy.CFG.kAPIVERSION,"v1");
+var toast=args.toast;
+var tab=args.tabgroup;
 var last_flag='';
 var last_flag_toparticle="";
 var updating=false;
@@ -9,8 +12,17 @@ $.is.init($.multilist);
 loadTopPack();
 loadTopArticle();
 $.ptr.refresh();
+
+
 $.multilist.addEventListener("itemclick",function(e){
-  Ti.API.info("multie",e.section);
+  if(e.sectionIndex==0) return;
+  var item=e.section.getItemAt(e.itemIndex);
+  var articleinfo=Alloy.createController("articleinfo",{nid:item.nid});
+  Alloy.Globals.Navigator.push(articleinfo);
+});
+$.toppack.getView().addEventListener('click',function(e){
+  alert("chufale");
+ tab.setIndex(1);
 });
 function loadTopArticle(){
     HTTP.HttpGET(
@@ -30,10 +42,11 @@ function topArticleSuccess(e){
    var result=JSON.parse(e);
     if(result.status==200){
        last_flag_toparticle=result.data.last_flag;
+       toast.info("testtesttesttest");
        $.toparticle.appendItems(bindViewForTopArticle(result.data.articles));
     }
     else{
-        
+        toast.info(result.msg);
     }
 }
 function bindViewForTopArticle(dataList){
@@ -41,7 +54,8 @@ function bindViewForTopArticle(dataList){
      _.each(dataList,function(element,index,list){
          var item={
            template:"toparticle",
-           title:{text:element.title}  
+           title:{text:element.title},
+           nid:element.nid  
          };
          itemList.push(item);
      });
@@ -65,16 +79,16 @@ function topPackSuccess(e){
        bindViewForTopPack(result.data.gifts);
     }
     else{
-        
+        toast.info(result.msg);
     }
 }
 function bindViewForTopPack(dataList){
-    $.toppack.getView('pack1').applyProperties({image:dataList[0].cover,giftid:dataList[0].gift_id});
-   $.toppack.getView('pack2').applyProperties({image:dataList[1].cover,giftid:dataList[1].gift_id});
+  $.toppack.getView('pack1').applyProperties({image:dataList[0].cover,giftid:dataList[0].gift_id});
+  $.toppack.getView('pack2').applyProperties({image:dataList[1].cover,giftid:dataList[1].gift_id});
 }
 
 function topError(e){
-    
+    toast.info("请检查网络连接稍后重试");
 }
 function myrefresh(){
     HTTP.HttpGET(
@@ -112,7 +126,7 @@ function success(e,type){
         }   
        
     }else{
-        
+        toast.info(result.msg);
     }
 }
 function error(e,type){
@@ -123,6 +137,7 @@ function error(e,type){
         updating=false;
         $.is.state(0);
     }
+    toast.info("请检查网络连接稍后重试");
 }
 function bindView(dataList){
     var itemList=[];
