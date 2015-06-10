@@ -62,6 +62,7 @@ Alloy.Globals.translateForGET=function(params){
 };
 //全App页面栈
 Alloy.Globals.Navigator = {};
+Alloy.Globals.LoginNavi={};
 Alloy.Globals.initNavigation = function() {   
   // Require in the navigation module
     Alloy.Globals.Navigator = require("navigation")({

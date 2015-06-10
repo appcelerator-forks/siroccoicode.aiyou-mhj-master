@@ -45,11 +45,9 @@
 				var result =JSON.parse(e);
 				
 				if(result.status==200){
-					alert(result.data);
 					Ti.App.Properties.setObject(Alloy.CFG.PLKEYS.USERINFO,result.data);
 				}
 			}
 			function error(e){
-			toast.info("shishi");
 			Ti.API.info(e);
 			}

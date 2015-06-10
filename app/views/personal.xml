@@ -1,8 +1,6 @@
 <Alloy>
 	<View id="personalBack">
-		<View id="naviBar">
-			<Label id="title"/>
-		</View>
+		<Require src="basicnavbar" id="navbar"/>
 		<ListView id="settinglist">
 			<Templates>
 				<ItemTemplate name="usertemplate" height=Ti.UI.SIZE>
@@ -22,13 +20,13 @@
 					</View>
 				</ItemTemplate>
 				<ItemTemplate name="setting" height=Ti.UI.SIZE>
-					<View class="itemback">
+					<View class="settingitemback">
 						<ImageView id="icon" bindId="icon"/>
 						<Label id="settingtitle" bindId="settingtitle"/>
 					</View>
 				</ItemTemplate>
 			</Templates>
-			<ListSection>
+			<ListSection id="usersection">
 				<HeaderView>
 					<View class="sectionHeader"/>
 				</HeaderView>

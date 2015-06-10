@@ -25,7 +25,6 @@ exports.isLoadPic=function(){
 
 exports.isLogin=function(){
 	var userInfo= Ti.App.Properties.getObject(Alloy.CFG.PLKEYS.USERINFO,null);
-	Ti.API.info("loginuserInfo",userInfo);
 	if (userInfo != null) {
 		return true;
 	}else{
@@ -39,18 +38,22 @@ exports.isAppCheck=function(){
 
 exports.getUserInfo=function(key){
 	var userInfo=Ti.App.Properties.getObject(Alloy.CFG.PLKEYS.USERINFO,null);
-	Ti.API.info("userInfo",userInfo);
-	if (userInfo != null) {
+	if (userInfo != null && key !=null) {
 		return userInfo[key];
-	};
+	}
+	if(userInfo != null && key == null){
+		return userInfo;
+	}
 }
 
 exports.getExtUserInfo=function(key){
 	var extUserInfo=Ti.App.Properties.getObject(Alloy.CFG.PLKEYS.EXTUSERINFO,null);
-	Ti.API.info("userInfo",extUserInfo);
-	if (extUserInfo != null) {
+	if (extUserInfo != null && key !=null) {
 		return extUserInfo[key];
-	};
+	}
+	if (extUserInfo != null && key == null) {
+		return extUserInfo;
+	}
 }
 
 exports.displayLogin=function(){

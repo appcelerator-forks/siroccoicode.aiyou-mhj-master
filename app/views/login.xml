@@ -3,11 +3,11 @@
 		<View id="iconborder">
 			<ImageView id="usericon"/>
 		</View>
-		<Widget src="club.siroccoicode.warntext"/>
+		<Widget src="club.siroccoicode.warntext" id="warn"/>
 		<Widget src="com.harkdev.stylehinttextfield" id="username"/>
 		<Widget src="com.harkdev.stylehinttextfield" id="password"/>
-		<Button/>
-		<Label text="快速注册 >" class="optionlabel"/>
-		<Label text="随便看看 >" class="optionlabel"/>
+		<Button title="登陆" onClick="login"/>
+		<Label text="快速注册 >" class="optionlabel" onClick="register"/>
+		<Label text="随便看看 >" class="optionlabel" onClick="closemodal"/>
 	</Window>
 </Alloy>

@@ -1,8 +1,13 @@
 var args = arguments[0] || {};
 var ImageFactory = require('ti.imagefactory');
+var toast=Alloy.createWidget("net.beyondlink.toast");
 var imageList=[];
 var HTTP=require("mhjHttpMethod");
-
+var tidlist=[];
+var namelist=[];
+var oritid="269";
+$.warn.hideWarnText();
+$.window.add(toast.getView());
 //初始化照片墙
 var collectionView = require("de.marcelpociot.collectionview");
 
@@ -46,56 +51,25 @@ listView.setSections(sections);
 $.imageWall.add(listView);
 
 function increase(e){
-    //其他字段
-    var datalist=[];
-    var boundary=Alloy.Globals.genBoundary();
-    var gid = {
-        name:"gid",
-        data:Alloy.CFG.GroupID
-    };
-    var tid ={
-        name:"tid",
-        data:269
-    };
-    var title ={
-        name:"title",
-        data:"StandardsTreerequests"
-    };
-    var body={
-        name:"body",
-        data:"Standards Tree requests made through IETF
-documents will be reviewed and approved by the IESG, while requests made by
-other recognized standards organizations will be reviewed by the Designated
-Expert in accordance"
-    };
-    datalist.push(gid,tid,title,body);
-    _.each(imageList,function(element,index,list){
-        var item={
-            type:"application/octet-stream",
-            name:"images["+index+"]",
-            filename:"upload"+index+".jpg",
-            data:Alloy.Globals.blobToByte(element)
-        };
-        datalist.push(item);
-    });
-    //var data =HTTP.POSTMultiPartData(datalist,boundary);
     var data={
         gid:Alloy.CFG.GroupID,
-        tid:269,
-        title:"StandardsTreerequests",
-        body:"Standards Tree requests made through IETF
-documents will be reviewed and approved by the IESG, while requests made by
-other recognized standards organizations will be reviewed by the Designated
-Expert in accordance"
+        tid:oritid,
+        title:$.articletitle.getValue(),
+        body:$.articlecontent.getValue()
     };
     _.extend(data,Alloy.Globals.arrayToDict(imageList,'images'));
     HTTP.HttpPOST(
         "postArticle",data,
-    postSuccess,postSuccess,true
+    postSuccess,httperror,true
     );
 }
 function postSuccess(e){
-    alert(e);
+    var result=JSON.parse(e);
+    if(result.status==200){
+        toast.info("发表成功");
+    }else{
+        toast.info(result.msg);
+    }
 }
 function getImageSuccess(e){
     if(e.mediaType == Ti.Media.MEDIA_TYPE_PHOTO){
@@ -138,6 +112,10 @@ function diaglogclick(e){
             break;
         }
     }
+    if(e.source.opttype=="chooseCategory"){
+        oritid=tidlist[parseInt(e.index)];
+        $.topic.setTitle(namelist[parseInt(e.index)]);
+    }
 }
 listView.addEventListener("itemclick",function(e){
     var items=listView.sections[e.sectionIndex].getItems();
@@ -155,3 +133,28 @@ listView.addEventListener("itemclick",function(e){
            choosedialog.show();     
     }
 });
+function httperror(e){
+    toast.info("请检查网络连接后稍后重试");
+}
+function showTextCategory(){
+    HTTP.HttpGET("articleCategory",{gid:Alloy.CFG.GroupID},getCategorySuccess,httperror,true);
+}
+function getCategorySuccess(e){
+    var result=JSON.parse(e);
+    if (result.status==200) {
+        var itemlist=[];
+        _.each(result.data.types,function(element,index,list){
+            itemlist.push(element.name);
+            tidlist.push(element.tid);
+        });
+        namelist=itemlist;
+        var choosedialog=Ti.UI.createOptionDialog({
+                options:itemlist,
+                selectedIndex:0,
+                title:"选取文章分类",
+                opttype:"chooseCategory"
+           });
+           choosedialog.addEventListener("click",diaglogclick);
+           choosedialog.show();     
+    }
+}

@@ -4,7 +4,7 @@
 			<Widget src="club.siroccoicode.warntext" id="warn" />
 			<View class="inputTextfield">
 				<Label class="leftview" text="分类"/>
-				<Button id="topic"/>
+				<Button id="topic" title="综合" onClick="showTextCategory"/>
 			</View>
 			<View class="inputTextfield">
 				<Label text="标题" class="leftview"/>
@@ -13,6 +13,6 @@
 			<TextArea id="articlecontent" />
 			<View id="imageWall">
 			</View>
-			<Button title="test" onClick="increase"/>
+			<Button title="发表文章" onClick="increase"/>
 	</Window>
 </Alloy>

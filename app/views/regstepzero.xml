@@ -5,6 +5,6 @@
 		<Widget src="com.harkdev.stylehinttextfield" id="phonenumber"/>
 		<Widget src="com.harkdev.stylehinttextfield" id="nickname"/>
 		<Widget src="com.harkdev.stylehinttextfield" id="password"/>
-		<Button id="regbutton"/>
+		<Button id="regbutton" onClick="nextstep"/>
 	</Window>
 </Alloy>

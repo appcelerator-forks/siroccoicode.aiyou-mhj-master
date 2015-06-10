@@ -4,8 +4,8 @@
 		<Widget src="club.siroccoicode.warntext" id="warn" />
 		<View id="codeline">
 			<Widget src="com.harkdev.stylehinttextfield" id="code"/>
-			<Button id="countdown"/>
+			<Button id="countdown" title="获取验证码" onClick="getcode"/>
 		</View>
-		<Button id="regbutton"/>
+		<Button id="regbutton" onClick="nextstep"/>
 	</Window>
 </Alloy>

@@ -17,6 +17,11 @@
 
 "#articlecontent":{
 	height:"120dp",
+	left: "10dp",
+	right:"10dp",
+	font:{
+		fontSize: "14sp"
+	}
 },
 "#articletitle":{
 	hintText:"标题不能被吃掉哦",

@@ -12,7 +12,6 @@
 ".itemback":{
 	height:Ti.UI.SIZE,
 	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
-	layout:"horizontal"
 },
 "#usericon":{
 	borderRadius: "8",
@@ -26,13 +25,17 @@
 "#rightInfo":{
 	layout:"vertical",
 	height: Ti.UI.SIZE,
+	left:"70dp",
 },
 "#bottomline":{
-	height:"20dp",
+	height:Ti.UI.SIZE,
+	width:Ti.UI.FILL,
 	layout: "horizontal",
-},
+	horizontalWrap: "false"
+}
 "#aiyoucoin":{
-	layout: "horizontal"
+	layout: "horizontal",
+	left:"5dp"
 },
 "#aiyouicon":{
 	image:"/imgres/aiyoucoin.png" ,
@@ -43,9 +46,18 @@
 	color: Alloy.CFG.COLORS.DarkBrown,
 	font: {
 		fontSize: "12sp"
+
 	}
 },
+"#username":{
+	left:"0dp",
+	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT,
+},
 //=============================普通设置项模板
+".settingitemback":{
+	layout:"horizontal",
+
+},
 "#icon":{
 	width: "15dp",
 	height: "15dp",

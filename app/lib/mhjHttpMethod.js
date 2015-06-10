@@ -11,6 +11,8 @@ var requestUrlList={
 	postArticle:"/article/entity",
     searchlist:"/search/list?",
     getpack:"/gift/entity",
+    articleCategory:"/article/classify?",
+    smscode:"/user/phoneCode",
 	topArticleList:"",
 	register:"",
 	appInfo:Alloy.CFG.APPINFO

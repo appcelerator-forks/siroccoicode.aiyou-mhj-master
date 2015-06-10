@@ -40,7 +40,8 @@
             "DEVICETOKEN": "deviceToken",
             "GETUICID": "getuiCID",
             "APPCHECKED": "appChecked"
-        }
+        },
+        "AIYOUAUTH":["普通用户","名人认证","达人认证","厂商认证"]
     },
     "env:development": {},
     "env:test": {},
