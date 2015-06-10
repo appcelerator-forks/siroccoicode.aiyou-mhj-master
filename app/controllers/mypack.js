@@ -1,32 +1,16 @@
 var args = arguments[0] || {};
+
 var lastflag="";
 var HTTP=require("mhjHttpMethod");
+var toast=Alloy.createWidget("net.beyondlink.toast");
+var updating=false;
+$.packback.add(toast.getView());
+$.ptr.refresh();
 $.is.init($.packlist);
 
-HTTP.HttpGET("packList",{
-	limit:Alloy.CFG.LIMITS,
-	gid:Alloy.CFG.GroupID,
-	last_flag:lastflag,
-	type:"user_got"
-},myPackSuccess,myPackError,true,'refresh');
 
 $.packlist.addEventListener("itemclick",function(e){
-	// switch (e.bindId){
-	// 	case "copytoclip":{
 
-	// 	}
-	// 	break;
-	// 	case "masterindicator":{
-	// 		alert("master有反应了");
-	// 	}
-	// 	break;
-	// 	case "detailindicator":{
-	// 		alert("detail有反应了");
-	// 	}
-	// 	break;
-	// 	default:
-	// 	break;
-	// }
 });
 
 function myPackSuccess(e,type){
@@ -37,23 +21,42 @@ function myPackSuccess(e,type){
 
 		if(type=="refresh"){
 			$.packlistsection.setItems(list);
-		}else if(type=="loadmore"){
+			$.ptr.hide();
+		}else if(type=="loadMore"){
+			updating=false;
+			if(result.data.more != 0){
+           $.is.state(1);
+       }else{
+        $.is.state(-1);
+    }
 			$.packlistsection.appendItems(list);
 		}
 	}else{
-
+	if(type=="refresh"){
+        $.ptr.hide();
+    }
+    if(type=="loadMore")
+    {
+        updating=false;
+        $.is.state(0);
+    }
+    toast.info(result.msg);
 	}
 }
 function myPackError(e,type){
-
+	 if(type=="refresh"){
+        $.ptr.hide();
+    }
+    if(type=="loadMore"){
+        updating=false;
+        $.is.state(0);
+    }
+    toast.info("请检查网络连接后重试");
 }
 function bindViewForMasterPack(itemlists){
-	
 	var items=[];
 	_.each(itemlists,function(element,index,list){
-		Ti.API.info("mypack1",element);
 		var item=bindViewForPackItem(element);
-		Ti.API.info("mypack2",item);
 		item=bindViewForMasterPackItem(item);
 		items.push(item);
 	});
@@ -97,10 +100,29 @@ function dropdown(e){
 		break;
 	}
 }
-
-function loadMore(){
-
+function copytoboard(e){
+	var item =e.section.getItemAt(e.itemIndex);
+	Ti.UI.Clipboard.setText(item.packcode.text);
+	toast.info("激活码已复制到剪切板中");
+}
+function loadMore(e){
+	if(updating){
+		e.success();
+		return;
+	}
+	updating=true;
+	HTTP.HttpGET("packList",{
+	limit:Alloy.CFG.LIMITS,
+	gid:Alloy.CFG.GroupID,
+	last_flag:lastflag,
+	type:"user_got"
+},myPackSuccess,myPackError,true,'loadMore');
 }
 function myrefresh(){
-
+	HTTP.HttpGET("packList",{
+	limit:Alloy.CFG.LIMITS,
+	gid:Alloy.CFG.GroupID,
+	last_flag:'',
+	type:"user_got"
+},myPackSuccess,myPackError,true,'refresh');
 }

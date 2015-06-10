@@ -53,6 +53,19 @@ exports.getExtUserInfo=function(key){
 	};
 }
 
-
+exports.displayLogin=function(){
+		var alertdialog=Ti.UI.createAlertDialog({
+			cancel:0,
+			buttonNames:["取消","登录"],
+			message:"您还没有登录，现在登录么？",
+			title:'登录'
+		});
+		alertdialog.addEventListener("click",function(e){
+			if(e.index==1){
+				Alloy.Globals.Navigator.openModal("login");
+			}
+		});
+		alertdialog.show();
+};
 
 

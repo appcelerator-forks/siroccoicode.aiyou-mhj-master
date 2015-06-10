@@ -70,9 +70,9 @@ function Navigation(_args) {
                 animated: false
             });
         } else {
-            controller.window.addEventListener('open', function(e) {
-                that.setActionBarStyle(controller.window);
-            });
+            // controller.window.addEventListener('open', function(e) {
+            //     that.setActionBarStyle(controller.window);
+            // });
             controller.window.open();
         }
 

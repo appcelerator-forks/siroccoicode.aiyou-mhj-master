@@ -20,7 +20,7 @@
 									</View>
 								</View>
 								<View class="bottomarea">
-									<Button class="copytoclip"/>
+									<Button class="copytoclip" onClick="copytoboard"/>
 									<ImageView id="masterindicator" bindId="masterindicator" class="indicator" onClick="dropdown"/>
 								</View>
 							</View>
@@ -50,7 +50,7 @@
 										<Label id="packdetail" bindId="usemethods" class="detailabel"/>
 								</View>
 								<View class="bottomarea">
-									<Button class="copytoclip"/>
+									<Button class="copytoclip" onClick="copytoboard"/>
 									<ImageView id="detailindicator" bindId="detailindicator" class="indicator" onClick="dropdown"/>
 								</View>
 							</View>

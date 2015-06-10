@@ -49,9 +49,12 @@
 	title: "复制激活码",
 	color:"white",
 },
+"#detailback":{
+	layout:"vertical",
+},
 "#masterindicator":{
 	image:"/imgres/masterdropdown.png"
 },
 "#detailindicator":{
 	image:"/imgres/detailclose.png"
-}
+},
