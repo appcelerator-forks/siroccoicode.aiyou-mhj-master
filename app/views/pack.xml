@@ -48,7 +48,7 @@
 										</View>
 
 									</View>
-									<Button id="getbutton"/>
+									<Button id="getbutton" onClick="getpack"/>
 									<ImageView id="detailindiactor" bindId="detailindiactor" onClick="closedetail"/>
 								</View>
 							</View>

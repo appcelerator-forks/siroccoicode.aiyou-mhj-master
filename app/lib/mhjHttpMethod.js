@@ -10,6 +10,7 @@ var requestUrlList={
     comment:"/comment/list?",
 	postArticle:"/article/entity",
     searchlist:"/search/list?",
+    getpack:"/gift/entity",
 	topArticleList:"",
 	register:"",
 	appInfo:Alloy.CFG.APPINFO
@@ -75,6 +76,23 @@ exports.HttpDEL=function(request,params,success,error,isAsync){
         client.setRequestHeader("AY-User-Token",Ti.App.Properties.getString(Alloy.CFG.kUSERTOKEN));
     }
     client.send(params,isAsync);
+};
+exports.HttpPUT=function(request,data,success,error,isAsync,type){
+    var client=Ti.Network.createHTTPClient({
+        onload:function(e){
+            success(this.responseText,type);
+        },
+        onerror:function(e){
+            error(e);
+        },
+        timeout:5000
+    });
+    client.open("PUT",Ti.App.Properties.getString(Alloy.CFG.kAPIHOST)+"/"+Ti.App.Properties.getString(Alloy.CFG.kAPIVERSION)+requestUrlList[request]);
+    client.setRequestHeader("AY-APPID",Alloy.CFG.APP_KEY);
+    if(lib.isLogin()){
+        client.setRequestHeader("AY-User-Token",lib.getUserInfo("token"));
+    }
+    client.send(data,isAsync);
 };
 exports.HttpError=function(e,toast){
     toast.info("请检查您的网络连接");

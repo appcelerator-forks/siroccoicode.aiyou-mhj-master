@@ -55,7 +55,15 @@ function success(e,type){
         }   
        
     }else{
-        toast.info(result.msg);
+        if(type=="refresh"){
+        $.ptr.hide();
+    }
+    if(type=="loadMore")
+    {
+        updating=false;
+        $.is.state(0);
+    }
+    toast.info(result.msg);
     }
 }
 
