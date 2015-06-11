@@ -38,7 +38,7 @@
 				</ItemTemplate>
 				<ItemTemplate name="detailDropdown" height=Ti.UI.SIZE>
 					<View id="detaildropdownback">
-						<ImageView id="detailDropdownIcon"/>
+						<ImageView id="detailDropdownIcon" onClick="loadmoredetail"/>
 					</View>
 				</ItemTemplate>
 			</Templates>
@@ -46,6 +46,7 @@
 			<ListSection>
 				<ListItem title="test" template="web"/>
 			</ListSection>
+			<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="loadMore" />
 		</ListView>
 		</View>	
 		<View id="inputbar">
@@ -53,7 +54,7 @@
 				<TextArea id="comment"/>
 				<Label id="inputHint"/>
 			</View>
-		<Button id="postcomment"/>
+		<Button id="postcomment" onClick="postComment"/>
 		</View>			
 	</Window>
 </Alloy>

@@ -35,8 +35,8 @@ $.settinglist.addEventListener('itemclick',function(e){
 			Alloy.Globals.Navigator.push(articleinfo);
 	 		break;
 	 	case Alloy.CFG.EVENTKEYS.PACKKEY:
-	 		var login=Alloy.createController("login");
-	 		Alloy.Globals.Navigator.push(login);
+	 		var ownpack=Alloy.createController("myowncollect");
+	 		Alloy.Globals.Navigator.push(ownpack);
 	 	
 	 	break;
 	 	case Alloy.CFG.EVENTKEYS.SETTINGKEY:

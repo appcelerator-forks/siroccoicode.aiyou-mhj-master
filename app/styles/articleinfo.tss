@@ -6,11 +6,11 @@
 //================================头部样式===========================================
 "#headerBack":{
 	height: Ti.UI.SIZE,
-	layout:"vertical",
-	backgroundColor: "#234523"
+	layout:"vertical"
 },
 "#titleback":{
 	height:"70dp",
+	layout:"vertical",
 },
 "#articletitle":{
 	font: {
@@ -26,7 +26,8 @@
  font:{
  	fontSize: "12sp"
  },
- color: Alloy.CFG.COLORS.DarkGray
+ color: Alloy.CFG.COLORS.DarkGray,
+ left:"10dp"
 	},
 "#articlecontent":{
 	},
@@ -37,7 +38,8 @@
 	},
 	color:Alloy.CFG.COLORS.LightGray,
 	height: "25dp",
-	top:"0dp"
+	top:"0dp",
+	left:"0dp"
 },
 
 
@@ -45,39 +47,46 @@
 "#mcback":{
 	height:Ti.UI.SIZE,
 	backgroundColor: Alloy.CFG.COLORS.LightBlack,
-	layout:"horizontal"
 },
 "#usericon":{
+	left:"5dp",
 	height:"45dp",
 	width:"45dp",
-	defaultImage: "/imgres/defaultuser.png"
+	defaultImage: "/imgres/defaultuser.png",
+	borderRadius: "8"
 },
 "#rightBack":{
 	layout:"vertical",
-
+	left:"55dp",
+	right:"5dp"
 },
 "#mcFirstLine":{
 	layout:"horizontal",
 	height:Ti.UI.SIZE,
 },
 "#userName"	:{
-	color:Alloy.CFG.COLORS.DarkBlack,
+	left:"20dp",
+	color:Alloy.CFG.COLORS.LightBrown,
 	font: {
 		fontSize: "12sp"
 	},
-
+	height:Ti.UI.SIZE
 },
 "#replytime":{
-	color:Alloy.CFG.COLORS.DarkBlack,
+	left:"20dp",
+	color:Alloy.CFG.COLORS.LightBrown,
 	font:{
 		fontSize: "12sp"
 	},
+	height:Ti.UI.SIZE
 },
 "#mcLabel":{
+	left:"0dp",
 	color:Alloy.CFG.COLORS.DarkBrown,
 	font:{
 		fontSize:"13sp"
 	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
 },
 
 //===============================子评论样式==========================================
@@ -85,6 +94,8 @@
 
 "#dcLabel":{
 	height:Ti.UI.SIZE,
+	left:"5dp",
+	textAlign:Ti.UI.TEXT_ALIGNMENT_LEFT,
 },
 "#dcback":{
 	height:Ti.UI.SIZE,	
@@ -96,7 +107,7 @@
 "#postcomment":{
 	title:"发表",
 	right:"5dp",
-	width:"50dp",
+	width:"60dp",
 },
 "#inputbar":{
 	height: "60dp",
@@ -104,12 +115,21 @@
 	backgroundColor: Alloy.CFG.COLORS.DarkBlack,
 },
 "#inputArea":{
-	right:"60dp",
+	right:"70dp",
 	left:"10dp",
+	height:"60dp",
 },	
 "#comment":{
-	height: "20dp"
-}
+	height: Ti.UI.FILL,
+	width:Ti.UI.FILL,
+},
+"#inputHint":{
+	left:"0dp",
+	color:Alloy.CFG.COLORS.LightBrown,
+	font:{
+		fontSize: "13sp"
+	}
+},
 //============================下拉样式==========================================
 "#detaildropdownback":{
 	height:"30dp"

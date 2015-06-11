@@ -8,13 +8,15 @@ var requestUrlList={
 	articleInfo:"/article/entity?",
 	login:"/user/login",
     comment:"/comment/list?",
+    postcomment:"/comment/entity",
 	postArticle:"/article/entity",
     searchlist:"/search/list?",
     getpack:"/gift/entity",
     articleCategory:"/article/classify?",
     smscode:"/user/phoneCode",
+    changepwd:"/user/password",
 	topArticleList:"",
-	register:"",
+	register:"/user/entity",
 	appInfo:Alloy.CFG.APPINFO
 };
 var lib=require("mhjLib");

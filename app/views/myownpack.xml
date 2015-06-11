@@ -1,0 +1,6 @@
+<Alloy>
+	<Window id="window" navBarHidden=true>
+		<Require src="basicnavbar" id="navbar"/>
+		
+	</Window>
+</Alloy>

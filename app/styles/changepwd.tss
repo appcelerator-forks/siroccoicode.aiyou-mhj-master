@@ -8,9 +8,14 @@
 	left: "15dp",
 	right: "15dp",
 },
-"#oldpwd":{
+"#phonenumber":{
 	hintColor:Alloy.CFG.COLORS.LightBrown,
-	hintText:"请输入旧密码",
+	hintText:"请输入手机号码",
+	backgroundColor: Alloy.CFG.COLORS.DarkBrown
+},
+"#code":{
+	hintColor:Alloy.CFG.COLORS.LightBrown,
+	hintText:"请输入验证码",
 	backgroundColor: Alloy.CFG.COLORS.DarkBrown
 },
 "#newpwd":{
@@ -18,10 +23,14 @@
 	hintText:"请输入新密码",
 	backgroundColor: Alloy.CFG.COLORS.DarkBrown
 },
-"#confirmpwd":{
-	hintColor:Alloy.CFG.COLORS.LightBrown,
-	hintText:"请再输一次确认密码",
-	backgroundColor: Alloy.CFG.COLORS.DarkBrown
+"#countdown":{
+	backgroundColor: "#0f0e0e",
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	right:"0dp",
+},
+"#countbutton":{
+	title:"点击获取验证码"
 },
 "#changepwd":{
 	font:{

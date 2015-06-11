@@ -32,9 +32,9 @@
 	height: "10dp",
 	backgroundColor: Alloy.CFG.COLORS.LightBlack
 },
-"#bindPhone":{
-	eventKey:Alloy.CFG.EVENTKEYS.BINDPHONE
-},
+// "#bindPhone":{
+// 	eventKey:Alloy.CFG.EVENTKEYS.BINDPHONE
+// },
 "#changePassword":{
 	eventKey:Alloy.CFG.EVENTKEYS.CHANGEPASSWORD
 },

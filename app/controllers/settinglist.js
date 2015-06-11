@@ -1,4 +1,5 @@
 var args = arguments[0] || {};
+var toast=Alloy.createWidget("net.beyondlink.toast");
 
 $.navbar.getView('titlelabel').text="设置";
 $.navbar.getView('backimage').addEventListener('click',function(e){
@@ -24,10 +25,10 @@ function isLoadPic(e){
 $.settingList.addEventListener('itemclick',function(e){
 	 var item = e.section.getItemAt(e.itemIndex);
 	 switch(item.properties.eventKey){
-	 	case Alloy.CFG.EVENTKEYS.BINDPHONE:
-	 		var bindphone=Alloy.createController('bindphone');
-	 		Alloy.Globals.Navigator.push(bindphone);
-	 	break;
+	 	// case Alloy.CFG.EVENTKEYS.BINDPHONE:
+	 	// 	var bindphone=Alloy.createController('bindphone');
+	 	// 	Alloy.Globals.Navigator.push(bindphone);
+	 	// break;
 	 	case Alloy.CFG.EVENTKEYS.CHANGEPASSWORD:
 	 	 	var changepwd=Alloy.createController('changepwd');
 	 	 	Alloy.Globals.Navigator.push(changepwd);

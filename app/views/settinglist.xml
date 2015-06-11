@@ -29,7 +29,7 @@
 					<HeaderView>
 						<View class="sectionheader"/>
 					</HeaderView>
-					<ListItem template="normalsetting"  settingtitle:text="手机绑定" id="bindPhone"/>
+					<!-- <ListItem template="normalsetting"  settingtitle:text="手机绑定" id="bindPhone"/> -->
 					<ListItem template="switchsetting" settingtitle:text="图片加载" />
 				</ListSection>
 
