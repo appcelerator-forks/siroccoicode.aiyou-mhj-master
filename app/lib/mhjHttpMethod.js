@@ -67,7 +67,7 @@ exports.HttpGET=function(request,params,success,error,isAsync,type){
 exports.HttpDEL=function(request,params,success,error,isAsync){
 	var client=Ti.Network.createHTTPClient({
         onload:function(e){
-            success(e);
+            success(this.responseText);
         },
         onerror:function(e){
             error(e);
@@ -76,8 +76,8 @@ exports.HttpDEL=function(request,params,success,error,isAsync){
     });
     client.open("DELETE",Ti.App.Properties.getString(Alloy.CFG.kAPIHOST)+"/"+Ti.App.Properties.getString(Alloy.CFG.kAPIVERSION)+requestUrlList[request]);
     client.setRequestHeader("AY-APPID",Alloy.CFG.APP_KEY);
-    if(Alloy.Globals.isLogin()){
-        client.setRequestHeader("AY-User-Token",Ti.App.Properties.getString(Alloy.CFG.kUSERTOKEN));
+    if(lib.isLogin()){
+        client.setRequestHeader("AY-User-Token",lib.getUserInfo("token"));
     }
     client.send(params,isAsync);
 };

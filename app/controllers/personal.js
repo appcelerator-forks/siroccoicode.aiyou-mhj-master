@@ -35,7 +35,7 @@ $.settinglist.addEventListener('itemclick',function(e){
 			Alloy.Globals.Navigator.push(articleinfo);
 	 		break;
 	 	case Alloy.CFG.EVENTKEYS.PACKKEY:
-	 		var ownpack=Alloy.createController("myowncollect");
+	 		var ownpack=Alloy.createController("login");
 	 		Alloy.Globals.Navigator.push(ownpack);
 	 	
 	 	break;
@@ -54,9 +54,12 @@ $.settinglist.addEventListener('itemclick',function(e){
 	 }
 });
 
-Ti.App.addEventListener("logined",function(e){
+Ti.App.addEventListener("login",function(e){
+	
 	if(lib.isLogin()){
+		
 		var userinfo=lib.getUserInfo();
+		
 		var list=Alloy.CFG.AIYOUAUTH;
 		var item={
 			template:"usertemplate",
@@ -66,6 +69,14 @@ Ti.App.addEventListener("logined",function(e){
 			aiyou:{text:" "+userinfo.points},
 			isLogin:true
 		};
-		$.usersection.updateItemAt(0,item);
-}
+		
+	}else{
+		var item={
+		template:"usertemplate",
+		username:{text:"点击登录"},
+		aiyou:{text:" 0"},
+		isLogin:false
+	};
+		}
+	$.usersection.updateItemAt(0,item);
 });

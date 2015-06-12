@@ -10,9 +10,18 @@ function login(){
 function success(e){
 	var result =JSON.parse(e);
 	if(result.status==200){
+
 		Ti.App.Properties.setObject(Alloy.CFG.PLKEYS.USERINFO,result.data);
-		Ti.App.fireEvent('logined');
-	}
+  
+    Ti.App.fireEvent("login");
+    
+    Alloy.Globals.Navigator.closeModal(that);
+  
+		
+	}else{
+    $.warn.showWarnText(result.msg);
+  }
+
 }
 
 function error(e){
