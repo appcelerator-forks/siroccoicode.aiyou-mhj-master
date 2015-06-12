@@ -36,11 +36,12 @@
 },
 "#masterbottomline":{
 	width: Ti.UI.SIZE,
-	layout: "horizontal",
 	height: Ti.UI.SIZE,
 
 },
 "#surplus":{
+
+	left:"5dp",
 	font: {
 		fontSize: "13sp"
 	},
@@ -48,6 +49,7 @@
 	height: "15dp"
 },
 "#aiyouback":{
+	left:"70dp",
 	layout:"horizontal",
 	height: "15dp"
 },

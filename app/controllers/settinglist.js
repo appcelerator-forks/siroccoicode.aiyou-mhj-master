@@ -14,7 +14,6 @@ $.settingList.sections[2].updateItemAt(1,versionitem);
 
 function isLoadPic(e){
 	var value=e.source.value;
-	alert(value);
 	if (value) {
 		Ti.App.Properties.setBool(Alloy.CFG.PLKEYS.LOADPIC,true);
 	}else{

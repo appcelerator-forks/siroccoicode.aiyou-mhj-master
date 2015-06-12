@@ -1,7 +1,6 @@
 var args = arguments[0] || {};
 var HTTP=require("mhjHttpMethod");
-Ti.App.Properties.setString(Alloy.CFG.kAPIHOST,"http://openapi.aiyou.com");
-Ti.App.Properties.setString(Alloy.CFG.kAPIVERSION,"v1");
+
 var last_flag='';
 var updating=false;
 $.is.init($.gongluelist);

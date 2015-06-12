@@ -53,6 +53,6 @@
 	backgroundImage:"/imgres/buttonback.png",
 	left: "25dp",
 	right:"25dp",
-	title: "退出",
+	title: "退出登录",
 	color:Alloy.CFG.COLORS.LightBrown
 }

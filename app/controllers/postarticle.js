@@ -67,6 +67,7 @@ function postSuccess(e){
     var result=JSON.parse(e);
     if(result.status==200){
         toast.info("发表成功");
+        Alloy.Globals.Navigator.pop();
     }else{
         toast.info(result.msg);
     }

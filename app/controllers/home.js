@@ -7,8 +7,7 @@
 			var http             =require("mhjHttpMethod");
 			var mhjlib           =require("mhjLib");
 			$.back.add(atoast.getView());
-			Ti.App.Properties.setString(Alloy.CFG.kAPIHOST,"http://openapi.aiyou.com");
-			Ti.App.Properties.setString(Alloy.CFG.kAPIVERSION,"v1");
+			
 			http.HttpPOST('login',{pwd:"6915158x",flag:"18667048968"},success,error,false);
 			var scrollAbleView=Ti.UI.createScrollableView({
 				views:[multiContentView,gonglue,novelsView],

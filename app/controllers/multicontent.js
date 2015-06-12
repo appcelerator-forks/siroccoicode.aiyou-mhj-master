@@ -1,13 +1,13 @@
 var args = arguments[0] || {};
 
 var HTTP=require("mhjHttpMethod");
-Ti.App.Properties.setString(Alloy.CFG.kAPIHOST,"http://openapi.aiyou.com");
-Ti.App.Properties.setString(Alloy.CFG.kAPIVERSION,"v1");
+
 var toast=args.toast;
 var tab=args.tabgroup;
 var last_flag='';
 var last_flag_toparticle="";
 var updating=false;
+var isMore=true;
 $.is.init($.multilist);
 loadTopPack();
 loadTopArticle();
@@ -21,7 +21,6 @@ $.multilist.addEventListener("itemclick",function(e){
   Alloy.Globals.Navigator.push(articleinfo);
 });
 $.toppack.getView().addEventListener('click',function(e){
-  alert("chufale");
  tab.setIndex(1);
 });
 function loadTopArticle(){
@@ -31,7 +30,7 @@ function loadTopArticle(){
     tid:Alloy.CFG.ZHTL,
     gid:Alloy.CFG.GroupID,
     last_flag:last_flag_toparticle,
-    type:"content"
+    type:"top"
     },
     topArticleSuccess,
     topError,
@@ -42,7 +41,9 @@ function topArticleSuccess(e){
    var result=JSON.parse(e);
     if(result.status==200){
        last_flag_toparticle=result.data.last_flag;
-       toast.info("testtesttesttest");
+       if(result.data.more==0){
+         $.topDropDown.hide();
+       }
        $.toparticle.appendItems(bindViewForTopArticle(result.data.articles));
     }
     else{
@@ -110,7 +111,7 @@ function success(e,type){
     if (result.status == 200) {
         last_flag=result.data.last_flag;
         if(type =="refresh"){
-            
+            isMore=true;
           $.article.setItems(bindView(result.data.articles));
           $.ptr.hide();
         }
@@ -121,6 +122,7 @@ function success(e,type){
             }else
             {
                 $.is.state(-1);
+                isMore=false;
             }
             $.article.appendItems(bindView(result.data.articles));
         }   
@@ -128,6 +130,7 @@ function success(e,type){
     }else{
         if(type=="refresh"){
         $.ptr.hide();
+        isMore=true;
     }
     if(type=="loadMore")
     {
@@ -140,6 +143,7 @@ function success(e,type){
 function error(e,type){
     if(type=="refresh"){
         $.ptr.hide();
+        isMore=true;
     }
     if(type=="loadMore"){
         updating=false;
@@ -179,6 +183,7 @@ function bindView(dataList){
     return itemList;
 }
 function loadMore(e){
+  if(isMore){
     if (updating) {
         e.success();
         return;
@@ -197,4 +202,8 @@ function loadMore(e){
     true,
     "loadMore"
 );
+  }else{
+    e.done();
+    return;
+  }
 }

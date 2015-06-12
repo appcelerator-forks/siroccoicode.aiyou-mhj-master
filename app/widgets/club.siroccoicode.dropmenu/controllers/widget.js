@@ -11,7 +11,7 @@ $.initDropList=function(dict){
 	callback=dict.callback || null;
 	$.dropsection.setItems(items);
 	$.dropmenuback.setTop(toppostion);
-	$.dropmenuback.setRight(rightpostion);
+	$.dropmenuback.setRight("-100dp");
 	isShown=true;
 };
 
@@ -22,13 +22,13 @@ $.droplist.addEventListener("itemclick",function(e){
 });
 
 $.animateIn=function(){
-	$.dropmenuback.animate({opacity:0.9,duration:300},function(){
+	$.dropmenuback.animate({right:rightpostion,duration:300},function(){
 		isShown=true;
 	});
 };
 
 $.animateOut=function(){
-	$.dropmenuback.animate({opacity:0,duration:300},function(){
+	$.dropmenuback.animate({right:"-100dp",duration:300},function(){
 		isShown=false;
 	})
 };

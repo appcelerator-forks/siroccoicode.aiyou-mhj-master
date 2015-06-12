@@ -1,10 +1,10 @@
 var args = arguments[0] || {};
 var HTTP=require("mhjHttpMethod");
-Ti.App.Properties.setString(Alloy.CFG.kAPIHOST,"http://openapi.aiyou.com");
-Ti.App.Properties.setString(Alloy.CFG.kAPIVERSION,"v1");
+var lib=require("mhjLib");
 var toast=Alloy.createWidget("net.beyondlink.toast");
 var last_flag='';
 var updating=false;
+var isMore=true;
 $.packback.add(toast.getView());
 $.is.init($.packlist);
 $.ptr.refresh();
@@ -32,6 +32,7 @@ function success(e,type){
     if (result.status == 200) {
         last_flag=result.data.last_flag;
         if(type =="refresh"){
+            isMore=true;
           $.packlistsection.setItems(bindView(result.data.gifts));
           $.ptr.hide();
       }
@@ -41,12 +42,14 @@ function success(e,type){
            $.is.state(1);
        }else{
         $.is.state(-1);
+        isMore=false;
     }
     $.packlistsection.appendItems(bindView(result.data.gifts));
 }   
 
 }else{
     if(type=="refresh"){
+        isMore=true;
         $.ptr.hide();
     }
     if(type=="loadMore")
@@ -120,7 +123,7 @@ function packInfoSuccess(e,source){
             methods:{text:result.data.use_method},
             saletime:{text:Alloy.Globals.stamptotime(result.data.sale_start,'/')+'-'+Alloy.Globals.stamptotime(result.data.sale_end,'/')},
             expiretime:{text:Alloy.Globals.stamptotime(result.data.valid,'/')},
-            aiyoucoin:{text:"1382"},
+            aiyoucoin:{text:(lib.isLogin())?lib.getUserInfo('points'):0},
             gottoken:(typeof result.data.got_token=="undefined")?"":result.data.got_token,
             giftid:result.data.gift_id
         };
@@ -161,6 +164,7 @@ function bindView(dataList){
 }
 
 function loadMore(e){
+    if(isMore){
     if (updating) {
         e.success();
         return;
@@ -178,5 +182,9 @@ function loadMore(e){
         true,
         "loadMore"
         );
+}else{
+    e.done();
+    return;
+}
 }
 

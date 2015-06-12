@@ -6,8 +6,7 @@ $.navbar.getView('backimage').addEventListener('click',function(e){
 });
 
 var HTTP=require("mhjHttpMethod");
-Ti.App.Properties.setString(Alloy.CFG.kAPIHOST,"http://openapi.aiyou.com");
-Ti.App.Properties.setString(Alloy.CFG.kAPIVERSION,"v1");
+
 var toast=Alloy.createWidget("net.beyondlink.toast");
 $.mycollectback.add(toast.getView());
 var lastflag='';

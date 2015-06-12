@@ -2,7 +2,7 @@
 	<View id="back">
 		<View id="line">
 			<Label id="index0" text="综合" segpostionindex="0"/>
-			<Label id="index1" text="礼包" segpostionindex="1"/>
+			<Label id="index1" text="攻略" segpostionindex="1"/>
 			<Label id="index2" text="小说" segpostionindex="2"/>
 		</View>
 		<ImageView id="float" zIndex="100"/>
